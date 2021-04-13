@@ -1,14 +1,13 @@
 /* Comenzamos nuestro diseño para dispositivo movil */
 *{
+    font-family: 'Poppins', sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-/* Diseño para el home de nuestra página */
-
 header{
-    background-color: blueviolet;
+    /* background-color: rgba(94, 2, 180, 0.9); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +17,7 @@ header{
 }   
 
 body{
-    background-color: rgb(170, 209, 120);
+    background-color: rgb(0, 0, 0);
     width: 100vw; /*Ocupe en todo momento todo el ancho de la pantalla*/
 }
 
@@ -52,40 +51,41 @@ nav ul li{   /*Aplica el diseño unicamente a las listas dentro de <nav></nav>*/
     border-radius: 10px;
 }
 
-.listas{
-    background-color: palevioletred;
-    display: flex;
-
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-.listas h3{
-    background-color: orange;
+.tit1{
+    background-color: rgba(184, 1, 221, 0.842);
+    padding: 5px;
+    margin-top: 10px;
     border-radius: 7%;
-    text-align:left;
-    height: 70px;
-    width: 33%;
-    margin: 2px;
-    padding: 3px;
 }
 
-.list1{
-    background-color: olive;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.cancion1 {
     margin-top: 15px;
+    margin-left: 10px;
+    height: 25vh;
+    width: 25vh;
+    border-radius: 5%;
 }
 
-h2{
-    background-color: cadetblue;
-    width: 100%;  /*Hacemos que ocupe el 100% de su contenedor padre. En este caso, el ".list1"*/
-    text-align:left
+.section1 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border: solid 1px brown;
 }
 
-.list1 ul li{
-    margin-top: 3px;
-    margin-bottom: 5px;
-    padding: 3px;
+h3 {
+    margin-top: 15px;
+    color: white;
+}
+
+p {
+    color: white;
+    font-size: 14px;
+}
+
+.section2 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    border: solid 1px brown;
 }
