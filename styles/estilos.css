@@ -51,6 +51,42 @@ nav ul li{   /*Aplica el diseño unicamente a las listas dentro de <nav></nav>*/
     border-radius: 10px;
 }
 
+form, .button {
+    background-color: brown;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 10px;
+    color: Black;
+    border: none;
+}
+
+
+.Busqueda {
+    color: black;
+    
+}
+
+.CuadrodeBusqueda {
+    background-color:rgb(241, 45, 67) ;
+    border: none;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 3px;
+    border-radius: 10px;
+
+
+}
+
+::placeholder {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
 .tit1{
     background-color: rgba(184, 1, 221, 0.842);
     padding: 5px;
@@ -148,4 +184,34 @@ p {
 .reproductor{
     width: 80%;
     height: 20px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;    
+}
+
+.Paginas{
+    display: inline-block;
+    width: 50%;
+    font-size: 14px;
+    vertical-align: middle;
+    margin: 0.75px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.Nombre{
+    display: inline-block;
+    width: 50%;
+    font-size: 14px;
+    color: #333;
+    vertical-align: middle;
+    margin: 0.75px;
+    padding-right: 10px;
+   
+}
+
+.afooter{
+    color: white;
 }

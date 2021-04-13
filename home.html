@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <title>Home |</title>
 </head>
@@ -18,7 +19,15 @@
                 <li>PLAYLIST</li>
                 <li>GENEROS</li>
                 <li>DETALLES DE GENERO</li>
-                <li>BUSQUEDA</li>
+                <form action="search-results.html" method="GET" target="_blank" role="search">
+                    <p class="Busqueda">
+                        <button class="button" type="submit">
+                            <i class="fas fa-search" ></i>
+                        </button>
+                        <input class="CuadrodeBusqueda" type="text" name="busquedademsuica" placeholder="Cancion, autor, album...">
+                        
+                    </p>
+                </form>
             </ul>
         </nav>
     </header>
@@ -50,7 +59,25 @@
         </div>
     </section>
 
+    <footer class="Fotter">
+        <div class="Paginas">
+            <ul >
+                <li><a class="afooter" href="home.html">Home</a></li>
+                <li><a class="afooter" href="">Detalle</a></li>
+                <li><a  class="afooter" href="">Playlist</a></li>
+                <li><a  class="afooter" href="">Géneros</a></li>
+                <li><a  class="afooter" href="">Detalle del género</a></li>
+       
+            </ul>
+        </div>
 
+        <div class="Nombre">
+            <p>Amodei, Stefano</p>
+            <p>Ader Busato, Pedro</p>
+            <a href="https://github.com/ValentinDelPino" target="_blank"> Del Pino, Valentin</a>
+
+        </div>
+    </footer>
 </body>
 
 </html>
