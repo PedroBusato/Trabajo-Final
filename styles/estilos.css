@@ -27,7 +27,7 @@ nav{
 
 a{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .logo{
@@ -61,14 +61,15 @@ nav ul li{   /*Aplica el diseño unicamente a las listas dentro de <nav></nav>*/
 .cancion1 {
     margin-top: 15px;
     margin-left: 10px;
-    height: 25vh;
-    width: 25vh;
+    height: 20vh;
+    width: 20vh;
     border-radius: 5%;
 }
 
 .section1 {
     display: flex;
     flex-direction: row;
+    width: 100vw;
     gap: 10px;
     border: solid 1px brown;
 }
@@ -87,5 +88,64 @@ p {
     display: flex;
     flex-direction: row-reverse;
     gap: 10px;
+    width: 100vw;
     border: solid 1px brown;
+}
+
+/* Estilos de Detalles */
+.tit2{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.info1{
+    background-color: yellow;
+    display: flex;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    width: 100vw;
+    flex-direction: row;
+}
+
+.info1 .colFotos{      /*Aclaramos que es la "colFotos" unicamente de ".info1"*/
+    background-color: violet;
+    display: flex;
+    margin-right: 10px;
+    padding-left: 3px;
+    align-items: center;
+    justify-content: center;
+}
+
+.info1 .colInfo{
+    background-color: yellowgreen;
+}
+
+.info1 p{
+    color: rgb(224, 96, 64);
+    padding-top: 3px;
+}
+
+.disco1{                   /*.disco1 representa la imagen de cada disco*/
+    height: 15vh;
+    width: 15vh;
+    border-radius: 5%;
+}
+
+.audio{                       /*Dentro de audio tenemos tanto el reproductor como el icono para agregar a la playlist*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.miMusica{
+    text-align: end;
+    padding: 3px;
+}
+
+.reproductor{
+    width: 80%;
+    height: 20px;
 }
