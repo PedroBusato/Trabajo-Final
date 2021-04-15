@@ -1,7 +1,7 @@
 /* Comenzamos nuestro diseño para dispositivo movil */
 *{
     font-family: 'Julius Sans One', sans-serif;
-    font-weight: bolder;
+    font-weight: bold;
     /* font-family: 'Poppins', sans-serif; */
     margin: 0px;
     padding: 0px;
@@ -67,7 +67,6 @@ form, .button {
     border: none;
 }
 
-
 .Busqueda {
     color: black;
     
@@ -81,17 +80,12 @@ form, .button {
     margin-bottom: 5px;
     padding: 3px;
     border-radius: 10px;
-
-
 }
 
 ::placeholder {
     color: black;
     text-decoration: none;
 }
-
-
-
 
 .tit1{
     background-color: brown;
@@ -116,7 +110,7 @@ form, .button {
     border: solid 1px brown;
 }
 
-h3 {
+h2 {
     margin-top: 15px;
     color: white;
 }
