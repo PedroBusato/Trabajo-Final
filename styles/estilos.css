@@ -1,9 +1,12 @@
 /* Comenzamos nuestro diseño para dispositivo movil */
 *{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    /* font-family: 'Poppins', sans-serif; */
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: rgb(0, 0, 77);
 }
 
 header{
@@ -17,7 +20,7 @@ header{
 }   
 
 body{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(30, 30, 30);
     width: 100vw; /*Ocupe en todo momento todo el ancho de la pantalla*/
 }
 
@@ -32,7 +35,7 @@ a{
 
 .logo{
     border-radius: 30%;
-    width: 50%;
+    width: 40%;
     margin-bottom: 15px;
 }
 
@@ -43,7 +46,8 @@ ul, ul a{
 }
 
 nav ul li{   /*Aplica el diseño unicamente a las listas dentro de <nav></nav>*/
-    background-color: brown;
+    background-color:  rgb(239, 76, 39);
+    /* background-color: brown; */
     margin-top: 3px;
     margin-bottom: 5px;
     padding: 3px;
@@ -52,7 +56,8 @@ nav ul li{   /*Aplica el diseño unicamente a las listas dentro de <nav></nav>*/
 }
 
 form, .button {
-    background-color: brown;
+    background-color:  rgb(239, 76, 39);
+    /* background-color: brown; */
     margin-top: 3px;
     margin-bottom: 5px;
     padding: 3px;
@@ -62,21 +67,19 @@ form, .button {
     border: none;
 }
 
-
 .Busqueda {
     color: black;
     
 }
 
 .CuadrodeBusqueda {
-    background-color:rgb(241, 45, 67) ;
+    background-color: brown;
+    /* background-color:rgb(241, 45, 67) ; */
     border: none;
     margin-top: 3px;
     margin-bottom: 5px;
     padding: 3px;
     border-radius: 10px;
-
-
 }
 
 ::placeholder {
@@ -84,11 +87,8 @@ form, .button {
     text-decoration: none;
 }
 
-
-
-
 .tit1{
-    background-color: rgba(184, 1, 221, 0.842);
+    background-color: brown;
     padding: 5px;
     margin-top: 10px;
     border-radius: 7%;
@@ -102,15 +102,22 @@ form, .button {
     border-radius: 5%;
 }
 
+.cancion2 {
+    margin-top: 15px;
+    margin-right: 10px;
+    height: 20vh;
+    width: 20vh;
+    border-radius: 5%;
+}
+
 .section1 {
     display: flex;
     flex-direction: row;
     width: 100vw;
     gap: 10px;
-    border: solid 1px brown;
 }
 
-h3 {
+h2 {
     margin-top: 15px;
     color: white;
 }
@@ -125,7 +132,14 @@ p {
     flex-direction: row-reverse;
     gap: 10px;
     width: 100vw;
-    border: solid 1px brown;
+}
+
+.section1, .section2 {
+    align-items: center;
+    padding-bottom: 15px;
+    margin-top: 5px;
+    border: dashed 1px rgb(239, 76, 39);
+    border-radius: 3%;
 }
 
 /* Estilos de Detalles */
@@ -189,6 +203,7 @@ p {
 footer{
     display: flex;
     flex-direction: row;    
+    margin-top: 15px;
 }
 
 .Paginas{
