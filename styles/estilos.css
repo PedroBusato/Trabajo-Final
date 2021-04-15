@@ -69,7 +69,6 @@ form, .button {
 
 .Busqueda {
     color: black;
-    
 }
 
 .CuadrodeBusqueda {
@@ -110,13 +109,6 @@ form, .button {
     border-radius: 5%;
 }
 
-.section1 {
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    gap: 10px;
-}
-
 h2 {
     margin-top: 15px;
     color: white;
@@ -125,6 +117,13 @@ h2 {
 p {
     color: white;
     font-size: 14px;
+}
+
+.section1 {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    gap: 10px;
 }
 
 .section2 {
@@ -142,6 +141,11 @@ p {
     border-radius: 3%;
 }
 
+.section2 .colInfo{
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
 /* Estilos de Detalles */
 .tit2{
     color: white;
@@ -149,7 +153,9 @@ p {
 }
 
 .info1{
-    background-color: yellow;
+    /* background-color: yellow; */
+    border: dashed 1px rgb(239, 76, 39);
+    border-radius: 3%;
     display: flex;
     margin-bottom: 25px;
     margin-top: 15px;
@@ -159,15 +165,17 @@ p {
 
 .info1 .colFotos{      /*Aclaramos que es la "colFotos" unicamente de ".info1"*/
     background-color: violet;
+    width: 30%;
     display: flex;
     margin-right: 10px;
-    padding-left: 3px;
+    /* padding-left: 3px; */
     align-items: center;
     justify-content: center;
 }
 
 .info1 .colInfo{
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
+    width: 70%;
 }
 
 .info1 p{
@@ -176,9 +184,10 @@ p {
 }
 
 .disco1{                   /*.disco1 representa la imagen de cada disco*/
-    height: 15vh;
-    width: 15vh;
+    height: 125px;
+    width: 100%;
     border-radius: 5%;
+    margin:0px;
 }
 
 .audio{                       /*Dentro de audio tenemos tanto el reproductor como el icono para agregar a la playlist*/
@@ -223,8 +232,7 @@ footer{
     color: #333;
     vertical-align: middle;
     margin: 0.75px;
-    padding-right: 10px;
-   
+    padding-right: 10px;  
 }
 
 .afooter{
