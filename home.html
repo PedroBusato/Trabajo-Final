@@ -13,15 +13,17 @@
 <br>
 <body>
     <header>
-        <img class="logo" src="images/logo.jpg" alt="logo">
         <nav>
+            <a href="#">
+                <img src="images/logo.jpg.png" alt="">
+            </a>
             <ul>
                 <li><a href="home.html">HOME</a></li>
                 <li> <a href="detail-track.html">DETALLES</a></li>
                 <li> <a href="playlist.html">PLAYLIST</a></li>
-                <li>GENEROS</li>
-                <li>DETALLES DE GENERO</li>
-                <form action="search-results.html" method="GET" target="_blank" role="search">
+                <li><a href="genres.html">GENEROS</a></li>
+                <li><a href="detail-genre.html">DETALLES DE GENERO</a></li>
+                <form action="search-results.html" method="GET"  role="search">
                     <p class="Busqueda">
                         <button class="button" type="submit">
                             <i class="fas fa-search" ></i>
@@ -186,21 +188,24 @@
     </section>
 <br>
     <footer>
-        <div class="Paginas">
-            <ul >
-                <li><a class="afooter" href="home.html">Home</a></li>
-                <li><a class="afooter" href="">Detalle</a></li>
-                <li><a  class="afooter" href="">Playlist</a></li>
-                <li><a  class="afooter" href="">Géneros</a></li>
-                <li><a  class="afooter" href="">Detalle del género</a></li>
-            </ul>
+        <ul class="terminos">
+            <a class="miniterminos" href="home.html"> Home </a>
+            <a class="miniterminos" href="detail-track.html"> Detalles </a>
+            <a class="miniterminos" href="playlist.html"> Playlist </a>
+            <a class="miniterminos" href="genres.html"> Generos </a>
+            <a class="miniterminosprivacidad" href="detail-genre.html"> Detalles de Generos</a>
+        </ul>
+        <p id="copyright"> Copyright ReVibe 2020. 
+            Todos los derechos reservados © </p>
+        <div class="socialmedia">
+            <a href="" class="logosocialmedia"> <i id="RS" class="fab fa-instagram"></i></a>
+            <a href="" class="logosocialmedia"> <i id="RS" class="fab fa-facebook-square"></i></a>
+            <a href="" class="logosocialmedia"> <i id="RS" class="fab fa-twitter"></i></a>
+           
         </div>
-
-        <div class="Nombre">
-            <p>Ader Busato, Pedro</p>
-            <p>Amodei, Stefano</p>
-            <a href="https://github.com/ValentinDelPino" target="_blank"></a><p> Del Pino, Valentin</p></a>
-        </div>
+        <div class="namescontainer">
+            <p class="names">Del Pino, Stefano, Pedro &amp; Co.</p>
+        </div> 
     </footer>
 </body>
 
