@@ -266,7 +266,6 @@ footer{
     width: 100%;
 }
 
-<<<<<<< HEAD
 .secalbum {
     width: 100%;
     display: flex;
@@ -308,7 +307,6 @@ footer{
 
 .albumtext {
     color: rgb(239, 76, 39);
-=======
 /* Estilos de Playlist */
 
 .headPlayList{
@@ -360,5 +358,4 @@ footer{
     background-color: violet;
     width: 80%;
     padding: 5px;
->>>>>>> 69c26c60fd3203127c593f5a498e5bf24ebb24a2
 }
