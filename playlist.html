@@ -2,11 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playlist</title>
+    <title>Playlist |</title>
 </head>
 <body>
-    <h1>Playlist</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li> <a href="detail-track.html">DETALLES</a></li>
+                <li> <a href="playlist.html">PLAYLIST</a></li>
+                <li>GENEROS</li>
+                <li>DETALLES DE GENERO</li>
+                <form action="search-results.html" method="GET" target="_blank" role="search">
+                    <p class="Busqueda">
+                        <button class="button" type="submit">
+                            <i class="fas fa-search" ></i>
+                        </button>
+                        <input class="CuadrodeBusqueda" type="text" name="busquedademsuica" placeholder="Cancion, autor, album...">
+                    </p>
+                </form>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="headPL">
+        <h1>Mi Playlist</h1>
+        <h2>Reproduccion Aleatoria</h2>
+    </section>
+
+    <div class="elemento1PL">
+        <img class="imgPL" src="images/jeanx.jpg" alt="">
+        <div class="infoPL">
+            <p>Jeanx</p>
+            <p>Fer Palacio</p>
+        </div>
+    </div>
+
+    <div class="elemento2PL">
+        <img class="imgPL" src="images/jeanx.jpg" alt="">
+        <div class="infoPL">
+            <p>Jeanx</p>
+            <p>Fer Palacio</p>
+        </div>
+    </div>
+
 </body>
 </html>
