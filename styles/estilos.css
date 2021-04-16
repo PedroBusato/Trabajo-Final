@@ -13,7 +13,7 @@ a {
 }
 
 header{
-    /* background-color: rgba(94, 2, 180, 0.9); */
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,6 +140,7 @@ p {
     border-radius: 5%;
 }
 
+/* Diseño de los DJs */
 .sectiondj {
     width: 100%;  /*De esta manera el ancho ocupa el 100% del body*/
 }
@@ -160,6 +161,50 @@ p {
     padding-right: 10px;
     padding-left: 10px;
     border-radius: 5%;
+}
+
+/* Diseño de los albumes*/
+.secalbum {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.albums {
+    width: 95%;
+    margin: 3px;
+    padding: 5px;
+    border: dashed rgb(239, 76, 39);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.albumborder {
+    margin: 3px;
+    padding: 5px;
+    width: 95%;
+    border: dotted  rgb(0, 0, 77);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.album1 {
+    margin: 3px;
+    padding: 5px;
+    border: solid brown;
+    width: 95%;
+    height: 300px;
+}
+
+.albumtext {
+    color: rgb(239, 76, 39);
 }
 
 /* Estilos de Detalles */
@@ -266,50 +311,8 @@ footer{
     width: 100%;
 }
 
-.secalbum {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-}
-
-.albums {
-    width: 95%;
-    margin: 3px;
-    padding: 5px;
-    border: dashed rgb(239, 76, 39);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.albumborder {
-    margin: 3px;
-    padding: 5px;
-    width: 95%;
-    border: dotted  rgb(0, 0, 77);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.album1 {
-    margin: 3px;
-    padding: 5px;
-    border: solid brown;
-    width: 95%;
-    height: 300px;
-}
-
-.albumtext {
-    color: rgb(239, 76, 39);
 /* Estilos de Playlist */
-
-.headPlayList{
+.headPL{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -321,6 +324,7 @@ footer{
     text-align: left;
     font-size: 40px;
     margin-bottom: 10px;
+    margin-left: 15px;
     width: 100%;
 }
 
@@ -335,18 +339,24 @@ footer{
 .elemento1PL, .elemento2PL{
     display: flex;
     align-items: center;
-    margin: 0px 10px 0px 10px;
+    max-width: 420px;            /*max-width para evitar que se deformen las fotos*/
+    margin: 0px 10px 5px 10px;
     padding: 3px;
     height: 75px;
 }
 
-.elemento1PL{
+.elemento1PL p, .elemento2PL p{
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+
+/* .elemento1PL{
     background-color: rgb(239, 76, 39, 0.3);
 }
 
 .elemento2PL{
     background-color: rgb(239, 76, 39, 0.5);
-}
+} */
 
 .imgPL{
     width: 20%;
@@ -355,7 +365,6 @@ footer{
 }
 
 .infoPL{
-    background-color: violet;
     width: 80%;
-    padding: 5px;
+    padding: 10px;
 }
