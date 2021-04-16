@@ -88,14 +88,16 @@ form, .button {
     border-radius: 15px;
 }
 
-.colInfo h2 {
+.colInfo{
     margin-top: 15px;
+    /* color: rgb(239, 76, 39); */
     color: white;
 }
 
 p {
-    color: white;
+    /* color:  rgb(239, 76, 39); */
     font-size: 14px;
+    color: white;
 }
 
 .section1 {
