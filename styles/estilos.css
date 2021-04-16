@@ -229,35 +229,70 @@ p {
 /* Footer */
 
 footer{
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    height: 8em;
+    padding-top: 20px;
+}
+
+.terminos {
     display: flex;
-    flex-direction: row;    
-    margin-top: 15px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0%;
+    padding: 0%;
+    font-size: 12px;
 }
 
-.Paginas{
-    display: inline-block;
-    width: 50%;
-    font-size: 14px;
-    vertical-align: middle;
-    margin: 0.75px;
-    padding-right: 10px;
+.miniterminos {
+    margin: 2%;
+    color: #D5B6A3;
+    text-decoration: none;
+    font-family: 'Arapey', serif;
+    padding-right: 2%;
+    padding-left: 2%;
+    border-right: solid 1px grey;
+    margin: 0%;
+}
+.miniterminosprivacidad {
+    border-right: none;
+    margin: 2%;
+    color: #D5B6A3;
+    text-decoration: none;
+    font-family: 'Arapey', serif;
+    padding-right: 2%;
+    padding-left: 2%;
+    align-content: center;
+    margin: 0px;
+}
+
+#copyright {
+    color: rgb(161, 160, 160);
     text-align: center;
+    font-family: 'Arapey', serif;
+    font-size: 12px;
+    margin: 0%;
+    margin-top: 5px;
+}
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+    margin-top: 5px;
+}
+.logosocialmedia {
+    width: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
-.Nombre{
-    display: inline-block;
-    width: 50%;
-    font-size: 14px;
-    color: #333;
-    vertical-align: middle;
-    margin: 0.75px;
-    padding-right: 10px;  
+.namescontainer {
+    padding: 5px;
+    background-color: black;
 }
-
-.afooter{
-    color: white;
-}
-
+/* Busqueda de Musica */
 .busquedademsuica {
     width: 100%; 
 }
@@ -307,9 +342,10 @@ footer{
 
 .albumtext {
     color: rgb(239, 76, 39);
+}
 /* Estilos de Playlist */
 
-.headPlayList{
+.headPlayList {
     display: flex;
     flex-direction: column;
     align-items: center;
