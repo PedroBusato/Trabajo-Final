@@ -1,11 +1,10 @@
 /* Comenzamos nuestro diseño para dispositivo movil */
 *{
-    font-family: 'Julius Sans One', sans-serif;
-    font-weight: bold;
-    /* font-family: 'Poppins', sans-serif; */
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
     color: rgb(0, 0, 77);
 }
 
@@ -81,12 +80,11 @@ form, .button {
 .tit1{
     background-color: brown;
     padding: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 7%;
+    margin: 10px;
+    border-radius: 15px;
 }
 
-h2 {
+.colInfo h2 {
     margin-top: 15px;
     color: white;
 }
@@ -98,14 +96,12 @@ p {
 
 .section1 {
     display: flex;
-    flex-direction: row;
-    width: 100vw;
+    flex-direction: row; 
 }
 
 .section2 {
     display: flex;
-    flex-direction: row-reverse;
-    width: 100vw;
+    flex-direction: row-reverse; 
 }
 
 .section1, .section2 {
@@ -113,6 +109,8 @@ p {
     border-radius: 3%;
     align-items: center;
     padding-bottom: 15px;
+    margin-left:10px;
+    margin-right: 10px;
     margin-top: 5px;
 }
 
@@ -224,10 +222,6 @@ p {
     height: 20px;
 }
 
-
-
-
-
 /* Footer */
 
 footer{
@@ -266,4 +260,57 @@ footer{
 
 .pBusqueda {
     width: 100%;
+}
+
+/* Estilos de Playlist */
+
+.headPlayList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.headPL h1{
+    text-align: left;
+    font-size: 40px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.headPL h2{
+    background-color:  rgb(239, 76, 39);
+    padding: 4px;
+    text-align: center;
+    margin: 15px 10px 15px 10px;
+    border-radius: 15px;
+}
+
+.elemento1PL, .elemento2PL{
+    display: flex;
+    align-items: center;
+    margin: 0px 10px 0px 10px;
+    padding: 3px;
+    height: 75px;
+}
+
+.elemento1PL{
+    background-color: rgb(239, 76, 39, 0.3);
+}
+
+.elemento2PL{
+    background-color: rgb(239, 76, 39, 0.5);
+}
+
+.imgPL{
+    width: 20%;
+    border-radius: 50%;
+    height: 70px;
+}
+
+.infoPL{
+    background-color: violet;
+    width: 80%;
+    padding: 5px;
 }
