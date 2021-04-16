@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: 'Julius Sans One', sans-serif;
     font-weight: bold;
-    color: rgb(0, 0, 77);
+    /* color: rgb(0, 0, 77); */
 }
 
 a {
@@ -31,11 +31,6 @@ nav{
     width: 100%;
 }
 
-.logo{
-    border-radius: 30%;
-    width: 40%;
-    margin-bottom: 15px;
-}
 
 ul, ul a{
     list-style-type: none;
@@ -331,10 +326,26 @@ footer{
     width: 20px;
     margin-left: 2px;
     margin-right: 2px;
+    
+}
+
+.fab fa-instagram, .fab fa-facebook-square, .fab fa-twitter {
+    color: rgba(255,255,255,0.5);
 }
 
 .namescontainer {
     padding: 5px;
+    background-color: black;
+}
+
+.names {
+    color: rgb(161, 160, 160);
+    width: 100%;
+    text-align: center;
+    font-family: 'Arapey', serif;
+    font-size: 10px;
+    align-content: center;
+    margin: 0%;
     background-color: black;
 }
 /* Busqueda de Musica */
@@ -346,7 +357,6 @@ footer{
     width: 100%;
 }
 
-<<<<<<< HEAD
 .secalbum {
     width: 100%;
     display: flex;
@@ -391,11 +401,9 @@ footer{
 }
 /* Estilos de Playlist */
 
-.headPlayList {
-=======
+/* .headPlayList {} */
 /* Estilos de Playlist */
 .headPL{
->>>>>>> e4db44ba059e62b9814f0c570b1ba03e6bf21bc0
     display: flex;
     flex-direction: column;
     align-items: center;
