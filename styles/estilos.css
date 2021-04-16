@@ -13,7 +13,6 @@ a {
 }
 
 header{
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -98,6 +97,7 @@ p {
     font-size: 14px;
 }
 
+/* Diseño de las canciones */
 .section1 {
     display: flex;
     flex-direction: row; 
@@ -203,11 +203,11 @@ p {
     height: 300px;
 }
 
-.albumtext {
+.albumtext, .albumtext a {
     color: rgb(239, 76, 39);
 }
 
-/* Estilos de Detalles */
+/* Estilo Detalles de Cancion */
 .tit2{
     color: white;
     margin-bottom: 10px;
@@ -336,7 +336,7 @@ footer{
     border-radius: 15px;
 }
 
-.elemento1PL, .elemento2PL{
+.elemento1PL{
     display: flex;
     align-items: center;
     max-width: 420px;            /*max-width para evitar que se deformen las fotos*/
@@ -345,18 +345,10 @@ footer{
     height: 75px;
 }
 
-.elemento1PL p, .elemento2PL p{
+.elemento1PL p{
     font-size: 15px;
     padding-bottom: 3px;
 }
-
-/* .elemento1PL{
-    background-color: rgb(239, 76, 39, 0.3);
-}
-
-.elemento2PL{
-    background-color: rgb(239, 76, 39, 0.5);
-} */
 
 .imgPL{
     width: 20%;
@@ -367,4 +359,40 @@ footer{
 .infoPL{
     width: 80%;
     padding: 10px;
+}
+
+/* Estilos Detalles de Genero */
+.titDisco{
+    margin-left: 10px;
+    color: white;
+}
+
+.infoDisco h2{
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.infoDisco p{
+    color: white;
+    padding-top: 5px;
+}
+
+.headDisco{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.infoDisco{
+    /* background-color: blueviolet; */
+    width: 100%;
+}
+
+.headDisco img{
+    width: 70vw;
+    display: flex;
+    justify-content: center;
 }
