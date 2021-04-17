@@ -531,7 +531,7 @@ footer{
     color: white;
 }
 
-.sectiondiscos ul li{   /*Aplica el diseño unicamente a las listas dentro de <nav></nav>*/
+.sectiondiscos ul li{   
     background-color:  rgb(0, 0, 77);
     color: rgb(239, 76, 39);
     margin-top: 3px;
@@ -540,3 +540,52 @@ footer{
     text-align: center;
     border-radius: 10px;
 }
+
+/* Detalles de Artistas DJs */
+.sectionartistas {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: solid rgba(0, 0, 0, 0.25);
+}
+
+.djarticle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.djname, .toptracks {
+    color: white;
+}
+
+.artistasimg {
+    width: 40%;
+    height: 150px;
+    border-radius: 50%;
+    border: solid black;
+    margin-bottom: 5px;
+    padding: 3px;
+}
+
+.seguirdj {
+    display: flex;
+    padding: 5px;
+    background-color:rgba(50, 50, 50, 0.4);
+    border-radius: 25%;
+    margin-bottom: 30px;
+}
+
+.sectionartistas ul li{   
+    width: 100%;
+    background-color:  rgba(0, 0, 0, 0.7);
+    color: rgb(239, 76, 39);
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 10px;
+}
+
