@@ -487,3 +487,56 @@ footer{
 .headDisco img{
     width: 50%;
 }
+
+/* Detalles de Albums */
+
+.sectiondiscos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+}
+
+.artdiscos1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border: solid brown;
+}
+
+.artdiscos2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    border: solid brown;
+}
+
+.imgalbums {
+    width: 45%;
+    height: 200px;
+    margin: 10px;
+    padding: 3px;
+    border-radius: 2%;
+    border: solid brown;
+}
+
+.datosalbum {
+    font-size: 17px;
+    margin: 10px;
+}
+
+.songlist {
+    color: white;
+}
+
+.sectiondiscos ul li{   /*Aplica el diseño unicamente a las listas dentro de <nav></nav>*/
+    background-color:  rgb(0, 0, 77);
+    color: rgb(239, 76, 39);
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 10px;
+}
