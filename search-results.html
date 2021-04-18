@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados de Busqueda</title>
     <link rel="stylesheet" href="/styles/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
 </head>
 <body>
-    <p>Resultados de Busqueda:</p>
+    <div class="HeaderSearch">
+        <p class="Titresults"><a href="home.html"><i  id="Homeicon" class="fas fa-home"></i></a> | Resultados de Busqueda</p>
+        <!-- <a class="linksearch" href="home.html"><i class="fas fa-home"></i></a> -->
+    </div>
     
-    <h1 class="tit2">JEANX</h1>
+    <h1 class="TitMusic">JEANX</h1>
 
     <section class="busquedademsuica">
     
@@ -23,15 +29,40 @@
             <p>Sencillo La Jeepeta</p>
         </div>
         
-        <br>
-
+        
+        ser does not support the audio element.
+        </audio>
         <div class="audio">
-            <audio class="reproductor" src="Canciones/nio-garcia-x-brray-x-juanka-x-anuel-aa-x-myke-towers-la-jeepeta-remix-lyric-video.mp3" controls="controls" type="audio/mpeg" preload="preload"></audio>
-            <i class="fas fa-plus-circle"></i>
+            <!-- <audio class="reproductordebusqueda" src="Canciones/nio-garcia-x-brray-x-juanka-x-anuel-aa-x-myke-towers-la-jeepeta-remix-lyric-video.mp3" controls="controls" type="audio/mpeg" preload="preload"></audio>  -->
+            <audio controls="controls" class="reproductordebusqueda">
+                <source src="Canciones/nio-garcia-x-brray-x-juanka-x-anuel-aa-x-myke-towers-la-jeepeta-remix-lyric-video.mp3" type="audio/mpeg" />
+            </audio>
+
+            <p class="playlist"><i class="fas fa-plus-circle" id=Plus></i>  Mi playlist</p>            
         </div>
-        <p class="miMusica">Mi playlist</p>
+       
         
     </section>
+    <footer>
+        <ul class="terminos">
+            <a class="miniterminos" href="home.html"> Home </a>
+            <a class="miniterminos" href="detail-track.html"> Detalles </a>
+            <a class="miniterminos" href="playlist.html"> Playlist </a>
+            <a class="miniterminos" href="genres.html"> Generos </a>
+            <a class="miniterminosprivacidad" href="detail-genre.html"> Detalles de Generos</a>
+        </ul>
+        <p id="copyright"> Copyright ReVibe 2020. 
+            Todos los derechos reservados © </p>
+        <div class="socialmedia">
+            <a href="" class="logosocialmedia"> <i id="RS" class="fab fa-instagram"></i></a>
+            <a href="" class="logosocialmedia"> <i id="RS" class="fab fa-facebook-square"></i></a>
+            <a href="" class="logosocialmedia"> <i id="RS" class="fab fa-twitter"></i></a>
+           
+        </div>
+        <div class="namescontainer">
+            <p class="names">Valentin, Stefano, Pedro &amp; Co.</p>
+        </div> 
+    </footer>
 
 </body>
 </html>
