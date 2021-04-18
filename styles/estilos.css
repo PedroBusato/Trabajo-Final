@@ -18,7 +18,7 @@ header{
     align-items: center;
     justify-content: center;
     padding: 10px;
-    width: 100vw;
+    width: 100%;
 }   
 
 body{
@@ -161,12 +161,11 @@ p {
 
 /* Diseño de los albumes*/
 .secalbum {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5px;
+    margin: 10px;
 }
 
 .albums {
@@ -268,11 +267,11 @@ p {
 }
 
 /* Footer */
-
 footer{
     background-color: black;
     display: grid;
     grid-template-columns: repeat(1 , 1fr);
+    width: 100vw;
     height: 8em;
     padding-top: 20px;
 }
@@ -349,6 +348,7 @@ footer{
     margin: 0%;
     background-color: black;
 }
+
 /* Busqueda de Musica */
 .busquedademsuica {
     width: 100%; 
@@ -359,12 +359,12 @@ footer{
 }
 
 .secalbum {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 5px;
+    margin: 10px;
 }
 
 .albums {
@@ -400,9 +400,7 @@ footer{
 .albumtext {
     color: rgb(239, 76, 39);
 }
-/* Estilos de Playlist */
 
-/* .headPlayList {} */
 /* Estilos de Playlist */
 .headPL{
     display: flex;
@@ -410,13 +408,14 @@ footer{
     align-items: center;
     margin-top: 15px;
     width: 100%;
+    color: white;
 }
 
 .headPL h1{
     text-align: left;
     font-size: 40px;
     margin-bottom: 10px;
-    margin-left: 15px;
+   padding-left: 10px;
     width: 100%;
 }
 
@@ -489,12 +488,12 @@ footer{
 }
 
 /* Detalles de Albums */
-
 .sectiondiscos {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    margin: 10px;
+    /* width: 100%; */
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .artdiscos1 {
@@ -589,3 +588,15 @@ footer{
     border-radius: 10px;
 }
 
+/* Estilos de Genero */
+.generos{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    margin: 30px 10px 10px 10px;
+}
+
+.generos img{
+    width: 100px;
+    max-height: 420px;
+}
