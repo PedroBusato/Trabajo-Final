@@ -672,6 +672,22 @@ footer{
     margin: 10px;
 }
 
+ul {
+    width: 100%;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.imgbands {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
 .sectiondetailgen ul li{   
     background-color:  rgba(0, 0, 0, 0.7);
     color: rgb(239, 76, 39);
@@ -689,4 +705,14 @@ footer{
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
+}
+
+
+
+/* Media Querie de playlist.html */
+
+@media (min-width:1024px){
+    .elemento1PL {
+
+    }
 }
