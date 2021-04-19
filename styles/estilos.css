@@ -281,8 +281,8 @@ footer{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0%;
-    padding: 0%;
+    /* margin-bottom: 0%;
+    padding: 0%; */
     font-size: 12px;
 }
 
@@ -294,7 +294,6 @@ footer{
     padding-right: 2%;
     padding-left: 2%;
     border-right: solid 1px grey;
-    margin: 0%;
 }
 .miniterminosprivacidad {
     border-right: none;
@@ -305,7 +304,6 @@ footer{
     padding-right: 2%;
     padding-left: 2%;
     align-content: center;
-    margin: 0px;
 }
 
 #copyright {
@@ -313,7 +311,6 @@ footer{
     text-align: center;
     font-family: 'Arapey', serif;
     font-size: 12px;
-    margin: 0%;
     margin-top: 5px;
 }
 .socialmedia {
@@ -426,13 +423,11 @@ footer{
     margin-top: 10px;
     height: 30px;
     margin-bottom: 5px ;
-
 }
  
 #Homeicon {
     color: #D5B6A3;
 }
-
 
 /* Estilos de Playlist */
 .headPL{
@@ -483,6 +478,10 @@ footer{
 .infoPL{
     width: 80%;
     padding: 10px;
+}
+
+.adicionalPL{
+    display: none;
 }
 
 /* Estilos Detalles de Genero */
@@ -689,13 +688,17 @@ footer{
     height: 100px;
     margin: 10px;
     padding: 3px;
-    border-radius: 50%;
+    border-radius: 15px;
     border: solid brown;
 }
 
 .datosdetgen {
     font-size: 15px;
     margin: 10px;
+}
+
+.sectiondetailgen ul{
+    width: 100%;
 }
 
 .sectiondetailgen ul li{   
