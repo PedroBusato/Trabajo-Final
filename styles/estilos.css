@@ -360,6 +360,8 @@ footer{
     font-size: 15px;
     padding-right: 10px;
     padding-left: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .ImgBusqueda {
@@ -388,7 +390,7 @@ footer{
 }
 
 .Titresults {
-    width: 100%;
+    /* width: 100%; */
     font-size:x-large;
     background-color: black;
     margin: 2%;
@@ -689,4 +691,27 @@ footer{
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
+}
+
+
+@media (min-width: 1024px){
+    nav ul li{
+        /* display: inline;
+        flex: row; */
+    }
+    .navbar {
+        flex-direction: row;
+
+    }
+    nav {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: .5rem 1rem;    
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+
+    }
 }
