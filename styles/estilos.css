@@ -460,7 +460,7 @@ footer{
 .elemento1PL{
     display: flex;
     align-items: center;
-    max-width: 420px;            /*max-width para evitar que se deformen las fotos*/
+    /* max-width: 420px;            max-width para evitar que se deformen las fotos */
     margin: 0px 10px 5px 10px;
     padding: 3px;
     height: 75px;
@@ -472,7 +472,7 @@ footer{
 }
 
 .imgPL{
-    width: 20%;
+    width: 70px;
     border-radius: 50%;
     height: 70px;
 }
@@ -481,6 +481,7 @@ footer{
     width: 80%;
     padding: 10px;
 }
+
 
 .adicionalPL{
     display: none;
@@ -744,9 +745,19 @@ li {
 
 @media (min-width:1024px){
     .elemento1PL {
-display: block;
+        display: flex;
+        flex-direction: row;
+        border-bottom: dashed rgba(0, 0, 0, 0.3);
     }
-}
+    .infoPL{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .adicionalPL {
+        display: block;
+    }
 @media (min-width: 1024px){
   
     .navbar {
