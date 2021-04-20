@@ -762,7 +762,6 @@ li {
   
     .navbar {
         flex-direction: row;
-
     }
     nav {
         position: relative;
@@ -774,4 +773,3 @@ li {
         flex-flow: row nowrap;
         justify-content: flex-start;
     }
-}
