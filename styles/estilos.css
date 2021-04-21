@@ -14,7 +14,7 @@ a {
 
 body{
     background-color: rgb(30, 30, 30);
-    width: 100vw; /*Ocupe en todo momento todo el ancho de la pantalla*/
+    width: 100%; 
 }
 
 /* Diseño Header */
@@ -37,7 +37,7 @@ ul, ul a{
     color: black;
 }
 
-nav ul li{   /*Aplica el diseño unicamente a las listas dentro de <nav></nav>*/
+nav ul li{
     background-color:  rgb(239, 76, 39);
     margin-top: 3px;
     margin-bottom: 5px;
@@ -49,6 +49,7 @@ nav ul li{   /*Aplica el diseño unicamente a las listas dentro de <nav></nav>*/
 form, .button {
     background-color:  rgb(239, 76, 39);
     color: Black;
+    border: none;
     text-align: center;
     margin-top: 3px;
     margin-bottom: 3px;
@@ -67,11 +68,13 @@ form, .button {
     border-radius: 10px;
 }
 
-::placeholder {
+.CuadrodeBusqueda ::placeholder {
     color: black;
     text-decoration: none;
 }
 
+
+/* Comenzamos con los diseños de los HTML */
 /* Diseño Home */
 .tit1{
     background-color: brown;
@@ -90,7 +93,7 @@ p {
     color: white;
 }
 
-/* Diseño de las canciones */
+/* Diseño de las canciones del Home */
 .section1 {
     display: flex;
     flex-direction: row; 
@@ -112,14 +115,16 @@ p {
 }
 
 .section1 .colFotos, .section2 .colFotos{
-    width: 40%;
     margin: 10px 10px 0px 10px;
 }
 
 .section1 .colInfo, .section2 .colInfo{
-    width: 60%;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.section2 .colInfo{
+    text-align: right;
 }
 
 .section1 a, .section2 a, footer a{
@@ -128,13 +133,13 @@ p {
 }
 
 .cancion1 {
-    height: 120px;
+    height: 130px;
     width: 100%;
-    /* max-width: 200px; */
+    max-width: 150px;
     border-radius: 5%;
 }
 
-/* Diseño de los DJs */
+/* Diseño de los DJs del Home */
 .sectiondj {
     width: 100%;  /*De esta manera el ancho ocupa el 100% del body*/
 }
@@ -150,7 +155,6 @@ p {
 
 .artistas {
     width: 100%;
-    /* max-width: 700px; */
     height: 300px;
     margin-top: 15px;
     padding-right: 10px;
@@ -158,7 +162,7 @@ p {
     border-radius: 5%;
 }
 
-/* Diseño de los albumes*/
+/* Diseño de los Albumes del Home*/
 .secalbum {
     display: flex;
     flex-direction: column;
@@ -201,9 +205,195 @@ p {
     color: rgb(239, 76, 39);
 }
 
-/* Estilo Detalles de Cancion */
+
+/* Comenzamos con los diseños de los Detalles */
+/* Diseño Detalles de Albumes */
+.sectiondiscos {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.artdiscos1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border: solid brown;
+}
+
+.artdiscos2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    border: solid brown;
+}
+
+.imgalbums {
+    width: 45%;
+    height: 200px;
+    margin: 10px;
+    padding: 3px;
+    border-radius: 2%;
+    border: solid brown;
+}
+
+.datosalbum {
+    font-size: 17px;
+    margin: 10px;
+}
+
+.songlist {
+    color: white;
+}
+
+.sectiondiscos ul li{   
+    background-color:  rgb(0, 0, 77);
+    color: rgb(239, 76, 39);
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Diseño de Artistas-DJs */
+.sectionartistas {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border: solid rgba(0, 0, 0, 0.25);
+}
+
+.djarticle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.djname, .toptracks {
+    color: white;
+}
+
+.artistasimg {
+    width: 40%;
+    max-width: 200px;
+    height: 170px;
+    border-radius: 50%;
+    border: solid black;
+    margin-bottom: 5px;
+    padding: 3px;
+}
+
+.seguirdj {
+    display: flex;
+    padding: 5px;
+    background-color:rgba(50, 50, 50, 0.4);
+    border-radius: 25%;
+    margin-bottom: 30px;
+}
+
+.sectionartistas ul{
+    width: 100%;
+}
+
+.sectionartistas ul li{   
+    background-color:  rgba(0, 0, 0, 0.7);
+    color: rgb(239, 76, 39);
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cancionesDj{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos Detalle de Genero */
+.sectiondetailgen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: dashed brown;
+    padding: 10px;
+}
+
+.artdetailgen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border: solid rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+.imgdetailgenre {
+    width: 30%;
+    height: 100px;
+    margin: 10px;
+    padding: 3px;
+    border-radius: 15px;
+    border: solid brown;
+}
+
+.datosdetgen {
+    font-size: 15px;
+    margin: 10px;
+}
+
+.sectiondetailgen ul {
+    width: 100%;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.imgbands {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.sectiondetailgen ul{
+    width: 100%;
+}
+
+.sectiondetailgen ul li{   
+    background-color:  rgba(0, 0, 0, 0.7);
+    color: rgb(239, 76, 39);
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.vermas {
+    padding: 5px;
+    width: 25%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+/* Diseño Detalles de Cancion */
 .tit2{
     color: white;
+    margin-left: 10px;
     margin-bottom: 10px;    
 }
 
@@ -211,9 +401,8 @@ p {
     border: dashed 1px rgb(239, 76, 39);
     border-radius: 3%;
     display: flex;
-    margin-bottom: 25px;
-    margin-top: 15px;
-    width: 100vw;
+    margin: 15px 10px 25px 10px;
+    width: auto;
     flex-direction: row;
 }
 
@@ -265,79 +454,114 @@ p {
     height: 20px;
 }
 
-/* Footer */
-footer{
-    background-color: black;
-    display: grid;
-    grid-template-columns: repeat(1 , 1fr);
-    height: 8%;
-    width: 100vw;
-    padding-top: 20px;
-}
-
-.terminos {
+/* Diseño de Playlist */
+.headPL{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    width: 90%;
-    margin: 0px 5% 0px 5%;
-    font-size: 12px;
+    margin-top: 15px;
+    width: 100%;
+    color: white;
 }
 
-.terminos li{
-    text-align: center;
-}
-
-.miniterminos {
-    border-right: solid 1px grey;
-    color: #D5B6A3;
-    margin: 0px 5px 5px 5px;
-    padding-right: 5px;
-    padding-left: 5px;
-}
-
-#copyright {
-    color: rgb(161, 160, 160);
-    text-align: center;
-    font-size: 12px;
-    margin-top: 7px;
-}
-
-.socialmedia {
+.randommix {
     display: flex;
+    align-items: center;
+}
+
+.headPL h1{
+    text-align: left;
+    font-size: 40px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.headPL h2{
+    background-color:  rgb(239, 76, 39);
+    padding: 4px;
+    text-align: center;
+    margin: 15px 10px 25px 10px;
+    border-radius: 15px;
+}
+
+.elemento1PL{
+    display: flex;
+    align-items: center;
+    /* margin: 0px 10px 5px 10px; */
+    padding: 3px;
+    height: 75px;
+}
+
+.elemento1PL p{
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+
+.imgPL{
+    width: 20%;
+    max-width: 90px;
+    border-radius: 50%;
+    height: 70px;
+}
+
+.infoPL{
+    width: 80%;
+    padding: 10px;
+}
+
+.adicionalPL{
+    display: none;   /*Cuando estamos en "mobile" no mostramos esto!*/
+}
+
+/* Diseño de Genero */
+.generos{
+    display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 3px;
+    width: 100vw;
+    padding-right: 10px;
+    padding-left: 10px;
+    gap: 10px;
+    border-radius: 30px;
+}
+
+.gen{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.genAd{
+    display: none;
+}
+
+.generos h2{
+    text-align: left;
+    color: white;
     margin-top: 5px;
 }
-.logosocialmedia {
-    width: 20px;
-    margin-left: 2px;
-    margin-right: 2px;
-    
-}
 
-.fab fa-instagram, .fab fa-facebook-square, .fab fa-twitter {
-    color: rgba(255,255,255,0.5);
-}
-
-.namescontainer {
-    padding: 5px;
-    background-color: black;
-}
-
-.names {
-    color: rgb(161, 160, 160);
+.generos img{
     width: 100%;
-    text-align: center;
-    font-family: 'Arapey', serif;
-    font-size: 10px;
-    align-content: center;
-    margin: 0%;
-    background-color: black;
+    height: 150px;
+    padding: 5px 0px 0px 0px;
+    border-radius: 20px;
+}
+
+.tit3{
+    color: white;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.tit4{
+    color: white;
+    margin-left: 10px;
 }
 
 /* Busqueda de Musica */
-.busquedademsuica {
+.busquedademusica {
     width: 100%; 
 }
 
@@ -393,7 +617,6 @@ footer{
     background-image: url(/images/fondo\ search.jpeg);
     border-radius: 30px ;
     margin-bottom: 10px;
-
 }
 
 .playlist {
@@ -418,62 +641,78 @@ footer{
     color: #D5B6A3;
 }
 
-/* Estilos de Playlist */
-.headPL{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* Footer */
+footer{
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    height: 8%;
+    width: auto;
     margin-top: 15px;
-    width: 100%;
-    color: white;
+    padding-top: 20px;
 }
 
-.headPL h1{
-    text-align: left;
-    font-size: 40px;
-    margin-bottom: 10px;
-    padding-left: 10px;
-    width: 100%;
-}
-
-.headPL h2{
-    background-color:  rgb(239, 76, 39);
-    padding: 4px;
-    text-align: center;
-    margin: 15px 10px 25px 10px;
-    border-radius: 15px;
-}
-
-.elemento1PL{
+.terminos {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin: 0px 10px 5px 10px;
-    padding: 3px;
-    height: 75px;
+    width: 90%;
+    margin: 0px 5% 0px 5%;
+    font-size: 12px;
 }
 
-.elemento1PL p{
-    font-size: 15px;
-    padding-bottom: 3px;
+.terminos li{
+    text-align: center;
 }
 
-.imgPL{
-    width: 70px;
-    border-radius: 50%;
-    height: 70px;
+.miniterminos {
+    border-right: solid 1px grey;
+    color: #D5B6A3;
+    margin: 0px 5px 5px 5px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
-.infoPL{
-    width: 80%;
-    padding: 10px;
+#copyright {
+    color: rgb(161, 160, 160);
+    text-align: center;
+    font-size: 12px;
+    margin-top: 7px;
 }
 
-
-.adicionalPL{
-    display: none;   /*Cuando estamos en "mobile" no mostramos esto!*/
+.socialmedia {
+    display: flex;
+    justify-content: center;
+    margin: 3px;
+    margin-top: 5px;
+}
+.logosocialmedia {
+    width: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
-/* Estilos Detalles de Genero */
+.fab fa-instagram, .fab fa-facebook-square, .fab fa-twitter {
+    color: rgba(255,255,255,0.5);
+}
+
+.namescontainer {
+    padding: 5px;
+    background-color: black;
+}
+
+.names {
+    color: rgb(161, 160, 160);
+    width: 100%;
+    text-align: center;
+    font-family: 'Arapey', serif;
+    font-size: 10px;
+    align-content: center;
+    margin: 0%;
+    background-color: black;
+}
+
+/* Diseño Detalles de Genero */ /*Preguntar de donde salio esto?!*/
 .titDisco{
     margin-left: 10px;
     color: white;
@@ -508,222 +747,6 @@ footer{
     width: 50%;
 }
 
-/* Detalles de Albums */
-.sectiondiscos {
-    display: flex;
-    flex-direction: column;
-    /* width: 100%; */
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-.artdiscos1 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    border: solid brown;
-}
-
-.artdiscos2 {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    width: 100%;
-    border: solid brown;
-}
-
-.imgalbums {
-    width: 45%;
-    height: 200px;
-    margin: 10px;
-    padding: 3px;
-    border-radius: 2%;
-    border: solid brown;
-}
-
-.datosalbum {
-    font-size: 17px;
-    margin: 10px;
-}
-
-.songlist {
-    color: white;
-}
-
-.sectiondiscos ul li{   
-    background-color:  rgb(0, 0, 77);
-    color: rgb(239, 76, 39);
-    margin-top: 3px;
-    margin-bottom: 5px;
-    padding: 3px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-/* Detalles de Artistas DJs */
-.sectionartistas {
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding: 5px;
-    border: solid rgba(0, 0, 0, 0.25);
-}
-
-.djarticle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.djname, .toptracks {
-    color: white;
-}
-
-.artistasimg {
-    width: 40%;
-    height: 150px;
-    border-radius: 50%;
-    border: solid black;
-    margin-bottom: 5px;
-    padding: 3px;
-}
-
-.seguirdj {
-    display: flex;
-    padding: 5px;
-    background-color:rgba(50, 50, 50, 0.4);
-    border-radius: 25%;
-    margin-bottom: 30px;
-}
-
-.sectionartistas ul li{   
-    width: 100%;
-    background-color:  rgba(0, 0, 0, 0.7);
-    color: rgb(239, 76, 39);
-    margin-top: 3px;
-    margin-bottom: 5px;
-    padding: 3px;
-    text-align: center;
-    border-radius: 10px;
-}
-
-/* Estilos de Genero */
-.generos{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    padding-right: 10px;
-    padding-left: 10px;
-    gap: 10px;
-    border-radius: 30px;
-}
-
-.gen{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.generos h2{
-    text-align: left;
-    color: white;
-    margin-top: 5px;
-}
-
-.generos img{
-    width: 100%;
-    height: 150px;
-    padding: 5px 0px 0px 0px;
-    border-radius: 20px;
-}
-
-.tit3{
-    color: white;
-    margin-bottom: 10px;
-    margin-left: 10px;
-}
-
-.tit4{
-    color: white;
-    margin-left: 10px;
-}
-
-/* Estilos Detalle de Genero */
-.sectiondetailgen {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 10px;
-    margin-left: 10px;
-    border: dashed brown;
-    padding: 10px;
-}
-
-.artdetailgen {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    border: solid rgba(0, 0, 0, 0.5);
-    border-radius: 30px;
-}
-
-.imgdetailgenre {
-    width: 30%;
-    height: 100px;
-    margin: 10px;
-    padding: 3px;
-    border-radius: 15px;
-    border: solid brown;
-}
-
-.datosdetgen {
-    font-size: 15px;
-    margin: 10px;
-}
-
-ul {
-    width: 100%;
-}
-
-li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.imgbands {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-}
-
-.sectiondetailgen ul{
-    width: 100%;
-}
-
-.sectiondetailgen ul li{   
-    background-color:  rgba(0, 0, 0, 0.7);
-    color: rgb(239, 76, 39);
-    margin-top: 3px;
-    margin-bottom: 5px;
-    padding: 3px;
-    text-align: center;
-    border-radius: 10px;
-    width: 100%;
-}
-
-.vermas {
-    padding: 5px;
-    width: 25%;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-}
-
 /* Por comodidad hacemos los Media Queries en distintos pero luego los juntamos */
 /* Media Querie de playlist.html */
 @media (min-width:1024px){
@@ -739,7 +762,9 @@ li {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        width: auto;
         height: 90px;
+        margin: 0px 10px 0px 10px;
         border-top: dashed 5px rgba(0, 0, 0, 0.3);
     }
 
@@ -747,20 +772,18 @@ li {
         font-size: 15px;
     }
 
-    .imgPL{         
+    .imgPL{
         height:65px;
-        width: 65px;
     }
 
     .infoPL{
-        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
 
     .infoPL p{
-        width: 25%;
+        width: 20%;
         padding: 10px;
     }
 @media (min-width: 1024px){
@@ -772,7 +795,15 @@ li {
         display: inline; 
     }
 }
-/* Media Queria Nav */
+
+/* Media Querie Header */
+@media (min-width: 1024px) {
+    header{
+        padding: 0px;
+    }
+}
+
+/* Media Querie Nav */
 @media (min-width: 1024px) {
     nav{
         background-color:  rgb(239, 76, 39);
@@ -781,19 +812,17 @@ li {
     
     nav ul{
         display: flex;
+        align-items: center;
         justify-content: space-between;
+        height: auto;
 
     }
 
     nav ul li{
         background-color: transparent;
         margin: 0px;
-        height: 50px;
-        font-size: 30px;
-    }
-
-    form{    /*Hasta que Valentin me de una mano lo dejo asi*/
-        display: none;
+        width: 15%;
+        font-size: 20px;
     }
 
     /* form{
@@ -810,13 +839,9 @@ li {
         background-color: transparent;
         height: 70px;
         width: 70px;
+    form{
+        display: inline;
     }
-
-    .CuadrodeBusqueda{
-        height: 60px;
-        width: 500px;
-        background-color: blue;
-    } */
 
     ::placeholder{
         color: transparent;   /*Le quitamos lo que dice dentro*/
@@ -825,22 +850,42 @@ li {
 
 /* Media Querie Footer */  
 @media (min-width:1024px){
-
+    /* Reservado para Valentin */
 }
 
 /* Media Querie Home */
 @media (min-width:1024px){
     .tit1{
+        width: auto;
         margin: 10px;
-        width: 30%;
     }
 
     .renglon{
         display: flex;
+        gap: 200px;
+        /* justify-content: space-between; */
+        margin: 10px;
     }
 
+    .renglon2home {
+        display: flex;
+        gap: 150px;
+        /* justify-content: space-between; */
+        margin: 10px;
+        /* width: 100%; */
+        /* border: solid brown; */
+    }
+
+    .renglon3home {
+        display: flex;
+        /* gap: 100px; */
+        justify-content: space-between;
+        margin: 10px;
+        /* width: 100%; */
+        /* border: solid brown; */
+    }
     .section1, .section2{
-        width: 50%;
+        width: 1000%;
         margin: 0px;
         border: none;
     }
@@ -848,8 +893,30 @@ li {
     .section2{
         flex-direction: row;
     }
+
+    /* .section1 img, .section2 img{
+        width: 190px;
+    } */
+
+    .cancion1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section2 .colInfo{
+        text-align: left;
+    }
+
+    /* .globaltracks {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } */
+    
     /* Lista de DJs */
     .sectiondj{
+        display: flex;
+        flex-direction: column;
         width: 33%;
     }
 
@@ -860,7 +927,146 @@ li {
 
     /* Lista Albumes */
     .secalbum{
-        margin: 0px;
+        /* background-color: hotpink; */
+        margin: 5px 5% 0px 0px;
+        width: 40%;
+    }
+}
+/* Media Querie Generos */
+@media (min-width:1024px){
+    .generos{
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .generos h2{
+        font-size: 20px;
+    }
+
+    .gen{
+        width: 30%;
+    }
+
+    .gen img, .genAd img{
+        height: 250px;
+    }
+
+    .genAd{
+        display: inline;
+        width: 30%;
+    }
+}
+
+/* Media Querie Detalles de Genero */
+@media (min-width:1024px){
+    .artdetailgen{
+        align-items: flex-end;
+    }
+    
+    .artdetailgen p{
+        font-size: 20px;
+    }
+
+    .imgdetailgenre{
+    height: 270px;
+    }
+
+    .sectiondetailgen ul{
+        flex-direction: row;
+    }
+
+    .sectiondetailgen ul li{
+        height: 50px;
+    }
+
+    .vermas{
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
+/* Media Querie Detalles de Canciones */
+@media (min-width:1024px){    
+    .info1{
+        width: 50%;
+        margin: 10px 0px 0px 0px;
+        border: none;
+    }
+}
+
+    .tit2{
+        margin-top: 10px;
+    }
+}
+
+/* Media Querie Detalles de Artistas */
+@media (min-width:1024px){
+    /* .djarticle{
+        width: 50%;
+    } */
+
+    .toptracks{
+        font-size: 25px;
+    }
+
+    .cancionesDj{
+        font-size: 25px;
+    }
+
+    .artistasimg{
+        max-width: 170px;
+    } 
+}
+
+/* Media Querie Detalles de Albumes */
+@media (min-width:1024px){
+    .sectiondiscos ul li{
+        width: 50%;
+        margin-top:7px;
+    }
+    
+    .sectiondiscos .vermas{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .sectiondiscos h2{
+        margin-top: 10px;
+    }
+
+    .artdiscos1{
         width: 50%;
     }
+
+    .artdiscos2{
+        width: 50%;
+        flex-direction: row;
+    }
+}
+
+/* Media Querie de Resultados de Busqueda */
+@media (min-width:1024px){
+    .TitMusic, .audio{
+        width: auto;
+        margin: 10px;
+    }
+    
+    .busquedademusica{
+        /* background-color: indigo; */
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 0px;
+        margin-bottom: 30px;
+    }
+
+    .ImgBusqueda{
+        width: 30%;
+        height: 250px;
+    }
+
+    .pBusqueda p{
+        font-size: 25px;
+    }
+
 }
