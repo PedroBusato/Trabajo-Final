@@ -12,6 +12,12 @@ a {
     text-decoration: none;
 }
 
+body{
+    background-color: rgb(30, 30, 30);
+    width: 100vw; /*Ocupe en todo momento todo el ancho de la pantalla*/
+}
+
+/* Diseño Header */
 header{
     display: flex;
     flex-direction: column;
@@ -20,11 +26,6 @@ header{
     padding: 10px;
     width: 100%;
 }   
-
-body{
-    background-color: rgb(30, 30, 30);
-    width: 100vw; /*Ocupe en todo momento todo el ancho de la pantalla*/
-}
 
 nav{
     width: 100%;
@@ -47,13 +48,12 @@ nav ul li{   /*Aplica el diseño unicamente a las listas dentro de <nav></nav>*/
 
 form, .button {
     background-color:  rgb(239, 76, 39);
-    margin-top: 3px;
-    margin-bottom: 5px;
-    padding: 3px;
-    text-align: center;
-    border-radius: 10px;
     color: Black;
-    border: none;
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding: 3px;
+    border-radius: 10px;
 }
 
 .Busqueda {
@@ -63,8 +63,6 @@ form, .button {
 .CuadrodeBusqueda {
     background-color: brown;
     border: none;
-    margin-top: 3px;
-    margin-bottom: 5px;
     padding: 3px;
     border-radius: 10px;
 }
@@ -74,6 +72,7 @@ form, .button {
     text-decoration: none;
 }
 
+/* Diseño Home */
 .tit1{
     background-color: brown;
     padding: 5px;
@@ -83,12 +82,10 @@ form, .button {
 
 .colInfo{
     margin-top: 15px;
-    /* color: rgb(239, 76, 39); */
     color: white;
 }
 
 p {
-    /* color:  rgb(239, 76, 39); */
     font-size: 14px;
     color: white;
 }
@@ -133,6 +130,7 @@ p {
 .cancion1 {
     height: 120px;
     width: 100%;
+    /* max-width: 200px; */
     border-radius: 5%;
 }
 
@@ -152,6 +150,7 @@ p {
 
 .artistas {
     width: 100%;
+    /* max-width: 700px; */
     height: 300px;
     margin-top: 15px;
     padding-right: 10px;
@@ -278,41 +277,32 @@ footer{
 
 .terminos {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    /* margin-bottom: 0%;
-    padding: 0%; */
+    width: 90%;
+    margin: 0px 5% 0px 5%;
     font-size: 12px;
 }
 
-.miniterminos {
-    margin: 2%;
-    color: #D5B6A3;
-    text-decoration: none;
-    font-family: 'Arapey', serif;
-    padding-right: 2%;
-    padding-left: 2%;
-    border-right: solid 1px grey;
+.terminos li{
+    text-align: center;
 }
-.miniterminosprivacidad {
-    border-right: none;
-    margin: 2%;
+
+.miniterminos {
+    border-right: solid 1px grey;
     color: #D5B6A3;
-    text-decoration: none;
-    font-family: 'Arapey', serif;
-    padding-right: 2%;
-    padding-left: 2%;
-    align-content: center;
+    margin: 0px 5px 5px 5px;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 #copyright {
     color: rgb(161, 160, 160);
     text-align: center;
-    font-family: 'Arapey', serif;
     font-size: 12px;
-    margin-top: 5px;
+    margin-top: 7px;
 }
+
 .socialmedia {
     display: flex;
     justify-content: center;
@@ -371,12 +361,10 @@ footer{
     width: 100%;
     color:black;
     text-align: center;
-    /* background-color: black; */
     border-radius: 30px;
     background-image: url(../images/fondo\ search.jpeg);
 }
 .secalbum {
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -385,7 +373,6 @@ footer{
 }
 
 .Titresults {
-    /* width: 100%; */
     font-size:x-large;
     background-color: black;
     margin: 2%;
@@ -445,7 +432,7 @@ footer{
     text-align: left;
     font-size: 40px;
     margin-bottom: 10px;
-   padding-left: 10px;
+    padding-left: 10px;
     width: 100%;
 }
 
@@ -453,14 +440,13 @@ footer{
     background-color:  rgb(239, 76, 39);
     padding: 4px;
     text-align: center;
-    margin: 15px 10px 15px 10px;
+    margin: 15px 10px 25px 10px;
     border-radius: 15px;
 }
 
 .elemento1PL{
     display: flex;
     align-items: center;
-    /* max-width: 420px;            max-width para evitar que se deformen las fotos */
     margin: 0px 10px 5px 10px;
     padding: 3px;
     height: 75px;
@@ -484,7 +470,7 @@ footer{
 
 
 .adicionalPL{
-    display: none;
+    display: none;   /*Cuando estamos en "mobile" no mostramos esto!*/
 }
 
 /* Estilos Detalles de Genero */
@@ -670,7 +656,6 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* width: 100%; */
     margin-right: 10px;
     margin-left: 10px;
     border: dashed brown;
@@ -739,37 +724,143 @@ li {
     color: white;
 }
 
-
-
+/* Por comodidad hacemos los Media Queries en distintos pero luego los juntamos */
 /* Media Querie de playlist.html */
-
 @media (min-width:1024px){
+    .headPL h1{
+        font-size: 30px;
+    }
+    
+    .headPL h2{
+        font-size: 20px;
+    }
+
     .elemento1PL {
         display: flex;
         flex-direction: row;
-        border-bottom: dashed rgba(0, 0, 0, 0.3);
+        justify-content: space-between;
+        height: 90px;
+        border-top: dashed 5px rgba(0, 0, 0, 0.3);
     }
+
+    .elemento1PL p{
+        font-size: 15px;
+    }
+
+    .imgPL{         
+        height:65px;
+        width: 65px;
+    }
+
     .infoPL{
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-    .adicionalPL {
-        display: block;
+
+    .infoPL p{
+        width: 25%;
+        padding: 10px;
     }
 @media (min-width: 1024px){
   
     .navbar {
         flex-direction: row;
+    }    
+    .adicionalPL {
+        display: inline; 
     }
-    nav {
-        position: relative;
+}
+/* Media Queria Nav */
+@media (min-width: 1024px) {
+    nav{
+        background-color:  rgb(239, 76, 39);
+        height: 50px;
+    }
+    
+    nav ul{
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
         justify-content: space-between;
-        padding: .5rem 1rem;    
-        flex-flow: row nowrap;
+
+    }
+
+    nav ul li{
+        background-color: transparent;
+        margin: 0px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    form{    /*Hasta que Valentin me de una mano lo dejo asi*/
+        display: none;
+    }
+
+    /* form{
+        display: flex;
         justify-content: flex-start;
     }
+        align-items: center;
+        height: 100px;
+        width: 16%;
+        background-color:yellow;
+    }    
+
+    .button{
+        background-color: transparent;
+        height: 70px;
+        width: 70px;
+    }
+
+    .CuadrodeBusqueda{
+        height: 60px;
+        width: 500px;
+        background-color: blue;
+    } */
+
+    ::placeholder{
+        color: transparent;   /*Le quitamos lo que dice dentro*/
+    }
+}
+
+/* Media Querie Footer */  
+@media (min-width:1024px){
+
+}
+
+/* Media Querie Home */
+@media (min-width:1024px){
+    .tit1{
+        margin: 10px;
+        width: 30%;
+    }
+
+    .renglon{
+        display: flex;
+    }
+
+    .section1, .section2{
+        width: 50%;
+        margin: 0px;
+        border: none;
+    }
+
+    .section2{
+        flex-direction: row;
+    }
+    /* Lista de DJs */
+    .sectiondj{
+        width: 33%;
+    }
+
+    .artistas{
+        height: 200px;
+        width: 300px;
+    }
+
+    /* Lista Albumes */
+    .secalbum{
+        margin: 0px;
+        width: 50%;
+    }
+}
