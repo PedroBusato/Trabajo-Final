@@ -707,41 +707,6 @@ footer{
     background-color: black;
 }
 
-/* Diseño Detalles de Genero */ /*Preguntar de donde salio esto?!*/
-.titDisco{
-    margin-left: 10px;
-    color: white;
-}
-
-.infoDisco{
-    background-color: blueviolet;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.infoDisco h2{
-    color: white;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.infoDisco p{
-    background-color: yellow;
-    color: white;
-    padding-top: 5px;
-}
-
-.headDisco{
-    background-color: aqua;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.headDisco img{
-    width: 50%;
-}
-
 /* Por comodidad hacemos los Media Queries en distintos pero luego los juntamos */
 /* Media Querie de playlist.html */
 @media (min-width:1024px){
@@ -806,7 +771,6 @@ footer{
         align-items: center;
         justify-content: space-between;
         height: auto;
-
     }
 
     nav ul li{
