@@ -464,6 +464,11 @@ li {
     color: white;
 }
 
+.randommix {
+    display: flex;
+    align-items: center;
+}
+
 .headPL h1{
     text-align: left;
     font-size: 40px;
@@ -583,6 +588,7 @@ li {
     border-radius: 30px;
     background-image: url(../images/fondo\ search.jpeg);
 }
+
 .secalbum {
     display: flex;
     flex-direction: column;
@@ -750,6 +756,11 @@ footer{
     .adicionalPL {
         display: inline; 
     }
+    
+@media (min-width: 1024px){
+    .navbar {
+        flex-direction: row;
+    }
 }
 
 /* Media Querie Header */
@@ -780,10 +791,6 @@ footer{
         font-size: 20px;
     }
 
-    form{
-        display: inline;
-    }
-
     ::placeholder{
         color: transparent;   /*Le quitamos lo que dice dentro*/
     }
@@ -803,24 +810,35 @@ footer{
 
     .renglon{
         display: flex;
+        gap: 200px;
+        margin: 10px;
+    }
+
+    .renglon2home {
+        display: flex;
+        gap: 150px;
+        margin: 10px;
+    }
+
+    .renglon3home {
+        display: flex;
         justify-content: space-between;
         margin: 10px;
         width: auto;
     }
-
     .section1, .section2{
-        width: 50%;
+        width: 1000%;
         margin: 0px;
         border: none;
     }
 
     .section2{
         flex-direction: row;
-        justify-content: center;   /*Centrarlo es mas bien por un tema estetico*/
     }
 
-    .section1 img, .section2 img{
-        width: 190px;
+    .cancion1 {
+        width: 150px;
+        height: 150px;
     }
 
     .section2 .colInfo{
@@ -846,6 +864,7 @@ footer{
         width: 40%;
     }
 }
+
 /* Media Querie Generos */
 @media (min-width:1024px){
     .generos{
@@ -914,10 +933,6 @@ footer{
 
 /* Media Querie Detalles de Artistas */
 @media (min-width:1024px){
-    /* .djarticle{
-        width: 50%;
-    } */
-
     .toptracks{
         font-size: 25px;
     }
@@ -981,5 +996,4 @@ footer{
     .pBusqueda p{
         font-size: 25px;
     }
-
 }
