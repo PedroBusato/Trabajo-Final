@@ -44,6 +44,7 @@ nav ul li{
     padding: 3px;
     text-align: center;
     border-radius: 10px;
+    justify-content: center;
 }
 
 form, .button {
@@ -992,11 +993,12 @@ footer{
         margin: 10px 0px 0px 0px;
         border: none;
     }
-}
+
 
     .tit2{
         margin-top: 10px;
     }
+
 }
 
 /* Media Querie Detalles de Artistas */
@@ -1070,3 +1072,6 @@ footer{
     }
 
 }
+
+
+/* Caca Culo Pis */
