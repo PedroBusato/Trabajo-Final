@@ -44,6 +44,7 @@ nav ul li{
     padding: 3px;
     text-align: center;
     border-radius: 10px;
+    justify-content: center;
 }
 
 form, .button {
@@ -716,62 +717,16 @@ footer{
 /* Por comodidad hacemos los Media Queries en distintos pero luego los juntamos */
 /* Media Querie de playlist.html */
 @media (min-width:1024px){
-    .headPL h1{
-        font-size: 30px;
-    }
-    
-    .headPL h2{
-        font-size: 20px;
-    }
-
-    .elemento1PL {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: auto;
-        height: 90px;
-        margin: 0px 10px 0px 10px;
-        border-top: dashed 5px rgba(0, 0, 0, 0.3);
-    }
-
-    .elemento1PL p{
-        font-size: 15px;
-    }
-
-    .imgPL{
-        height:65px;
-    }
-
-    .infoPL{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .infoPL p{
-        width: 20%;
-        padding: 10px;
-    }
-
-    .adicionalPL {
-        display: inline; 
-    }
-    
-@media (min-width: 1024px){
-    .navbar {
-        flex-direction: row;
-    }
-}
-
-/* Media Querie Header */
-@media (min-width: 1024px) {
+    /* Diseño del Header */
     header{
         padding: 0px;
     }
-}
 
-/* Media Querie Nav */
-@media (min-width: 1024px) {
+    .navbar {
+        flex-direction: row;
+    }
+    
+    /* Diseño de Nav */
     nav{
         background-color:  rgb(239, 76, 39);
         height: 50px;
@@ -794,15 +749,8 @@ footer{
     ::placeholder{
         color: transparent;   /*Le quitamos lo que dice dentro*/
     }
-}
 
-/* Media Querie Footer */  
-@media (min-width:1024px){
-    /* Reservado para Valentin */
-}
-
-/* Media Querie Home */
-@media (min-width:1024px){
+    /* Diseño de Home */
     .tit1{
         width: auto;
         margin: 10px;
@@ -859,14 +807,11 @@ footer{
 
     /* Lista Albumes */
     .secalbum{
-        /* background-color: hotpink; */
         margin: 5px 5% 0px 0px;
         width: 40%;
     }
-}
 
-/* Media Querie Generos */
-@media (min-width:1024px){
+    /* Diseño de Generos */
     .generos{
         width: 100%;
         justify-content: space-between;
@@ -888,10 +833,50 @@ footer{
         display: inline;
         width: 30%;
     }
-}
 
-/* Media Querie Detalles de Genero */
-@media (min-width:1024px){
+    /* Diseño Playlist */
+    .headPL h1{
+        font-size: 30px;
+    }
+    
+    .headPL h2{
+        font-size: 20px;
+    }
+
+    .elemento1PL {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: auto;
+        height: 90px;
+        margin: 0px 10px 0px 10px;
+        border-top: dashed 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .elemento1PL p{
+        font-size: 15px;
+    }
+
+    .imgPL{
+        height:65px;
+    }
+
+    .infoPL{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .infoPL p{
+        width: 20%;
+        padding: 10px;
+    }
+
+    .adicionalPL {
+        display: inline; 
+    }
+
+    /* Diseño Detalle de Generos */
     .artdetailgen{
         align-items: flex-end;
     }
@@ -916,10 +901,8 @@ footer{
         height: 40px;
         font-size: 15px;
     }
-}
 
-/* Media Querie Detalles de Canciones */
-@media (min-width:1024px){    
+    /* Diseño de Detalles de Canciones */
     .info1{
         width: 50%;
         margin: 10px 0px 0px 0px;
@@ -929,10 +912,8 @@ footer{
     .tit2{
         margin-top: 10px;
     }
-}
 
-/* Media Querie Detalles de Artistas */
-@media (min-width:1024px){
+    /* Diseño Detalles de Artistas */
     .toptracks{
         font-size: 25px;
     }
@@ -943,11 +924,9 @@ footer{
 
     .artistasimg{
         max-width: 170px;
-    } 
-}
+    }
 
-/* Media Querie Detalles de Albumes */
-@media (min-width:1024px){
+    /*  Diseño Detalles de Albumes*/
     .sectiondiscos ul li{
         width: 50%;
         margin-top:7px;
@@ -970,17 +949,14 @@ footer{
         width: 50%;
         flex-direction: row;
     }
-}
 
-/* Media Querie de Resultados de Busqueda */
-@media (min-width:1024px){
+    /* Diseño de Resultado de Busqueda */
     .TitMusic, .audio{
         width: auto;
         margin: 10px;
     }
     
     .busquedademusica{
-        /* background-color: indigo; */
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
