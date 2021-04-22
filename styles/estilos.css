@@ -329,7 +329,7 @@ p {
 
 .sectionartistas ul li{   
     background-color:  rgba(0, 0, 0, 0.7);
-    color: rgb(239, 76, 39);
+    color: #c302d5;
     margin-top: 3px;
     margin-bottom: 5px;
     padding: 3px;
@@ -597,6 +597,10 @@ li {
     padding-left: 10px;
     padding-top: 3px;
     padding-bottom: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align:center;
+    
 }
 
 .ImgBusqueda {
@@ -612,7 +616,7 @@ li {
     color:black;
     text-align: center;
     border-radius: 30px;
-    background-image: url(../images/fondo\ search.jpeg);
+    background-color: #96009d;
 }
 
 .secalbum {
@@ -625,9 +629,9 @@ li {
 
 .Titresults {
     font-size:x-large;
-    background-color: black;
+    background-color: #9D0208;
     margin: 2%;
-    color: #D5B6A3;
+    color: Black;
     text-decoration: none;
     font-family: 'Arapey', serif;
     padding-right: 2%;
@@ -641,7 +645,7 @@ li {
     padding-right: 10px;
     padding-left: 10px;
     display:flex;
-    background-image: url(/images/fondo\ search.jpeg);
+    background-color: #c302d5;
     border-radius: 30px ;
     margin-bottom: 10px;
 }
@@ -665,12 +669,29 @@ li {
 }
  
 #Homeicon {
-    color: #D5B6A3;
+    color: Black;
 }
+
+.Temasrelacionado {
+    background: linear-gradient(100deg, #c302d5,Black);
+    width: 100%;
+    text-align: center;
+    border: solid 5px #96009d;
+    border-left: none;
+    border-right: none;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.detalle {
+    text-decoration: none;
+    color: white;
+}
+
 
 /* Footer */
 footer{
-    background-color: black;
+    background-color: #9D0208;
     display: grid;
     grid-template-columns: repeat(1 , 1fr);
     height: 8%;
@@ -875,7 +896,7 @@ footer{
         width: auto;
         height: 90px;
         margin: 0px 10px 0px 10px;
-        border-top: dashed 5px rgba(0, 0, 0, 0.3);
+        border-top: dashed 5px rgba(255,255,255,0.1);
     }
 
     .elemento1PL p{
@@ -991,10 +1012,12 @@ footer{
 
     .ImgBusqueda{
         width: 30%;
-        height: 250px;
+        height: 350px;
     }
 
     .pBusqueda p{
         font-size: 25px;
     }
+
+    
 }
