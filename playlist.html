@@ -7,22 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist |</title>
 </head>
+
 <body>
     <main>
         <header>
+            <div class="logo1">
+                <img  class="logoneon1" src="images/logoneon.jpg" alt="">
+            </div>
+    
             <nav>
+                <div class="logo2">
+                    <img  class="logoneon2" src="images/logoneon.jpg" alt="">
+                </div>
+
                 <ul>
                     <li><a href="home.html">HOME</a></li>
-                    <li> <a href="playlist.html">PLAYLIST</a></li>
-                    <li> <a href="genres.html">GENEROS</a></li>
-                    <li> <a href="detail-track.html">DETALLES DE ALBUM</a></li>
-                    <li> <a href="detail-genre.html">DETALLES DE GENERO</a></li>
+                    <li><a href="playlist.html">PLAYLIST</a></li>
+                    <li><a href="genres.html">GENRES</a></li>
+                    <li><a href="detail-album.html">ALBUM DETAILS</a></li>
+                    <li><a href="detail-genre.html">GENRE DETAILS</a></li>
                     <form action="search-results.html" method="GET" target="_blank" role="search">
                         <p class="Busqueda">
                             <button class="button" type="submit">
                                 <i class="fas fa-search" ></i>
                             </button>
-                            <input class="CuadrodeBusqueda" type="text" name="busquedademsuica" placeholder="Cancion, autor, album...">
+                            <input class="CuadrodeBusqueda" type="text" name="busquedademsuica" placeholder="Song, author, album...">
                         </p>
                     </form>
                 </ul>
@@ -30,8 +39,8 @@
         </header>
         
         <section class="headPL">
-            <h1>Mi Playlist</h1>
-            <div class="randommix"><h2>Reproduccion Aleatoria</h2><i class="fas fa-random"></i></div>
+            <h1>My Playlist</h1>
+            <div class="randommix"><h2>Random Reproduction</h2><i class="fas fa-random"></i></div>
         </section>
         
         <section>
@@ -108,14 +117,14 @@
 
         <footer>
             <ul class="terminos">
-                <li><a class="miniterminos" href="home.html"> Home </a></li>
-                <li><a class="miniterminos" href="detail-track.html"> Detalles </a></li>
-                <li><a class="miniterminos" href="playlist.html"> Playlist </a></li>
-                <li><a class="miniterminos" href="genres.html"> Generos </a></li>
-                <li><a class="miniterminos" href="detail-genre.html"> Detalles de Generos</a></li>
+                <a class="miniterminos" href="home.html"> Home </a>
+                <a class="miniterminos" href="detail-track.html"> Playlist </a>
+                <a class="miniterminos" href="playlist.html"> Genres </a>
+                <a class="miniterminos" href="genres.html"> Album Details </a>
+                <a class="miniterminos" href="detail-genre.html"> Genre Details </a>
             </ul>
 
-            <p id="copyright"> Copyright ReVibe 2020. Todos los derechos reservados © </p>
+            <p id="copyright"> Copyright ReVibe 2020. All Rights Reserved © </p>
             
             <div class="socialmedia">
                 <a href="" class="logosocialmedia"> <i id="RS" class="fab fa-instagram"></i></a>
