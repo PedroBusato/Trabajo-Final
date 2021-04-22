@@ -614,6 +614,7 @@ li {
     border-radius: 30px;
     background-image: url(../images/fondo\ search.jpeg);
 }
+
 .secalbum {
     display: flex;
     flex-direction: column;
@@ -738,44 +739,127 @@ footer{
     background-color: black;
 }
 
-/* Diseño Detalles de Genero */ /*Preguntar de donde salio esto?!*/
-.titDisco{
-    margin-left: 10px;
-    color: white;
-}
-
-.infoDisco{
-    background-color: blueviolet;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.infoDisco h2{
-    color: white;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.infoDisco p{
-    background-color: yellow;
-    color: white;
-    padding-top: 5px;
-}
-
-.headDisco{
-    background-color: aqua;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.headDisco img{
-    width: 50%;
-}
-
 /* Por comodidad hacemos los Media Queries en distintos pero luego los juntamos */
 /* Media Querie de playlist.html */
 @media (min-width:1024px){
+    /* Diseño del Header */
+    header{
+        padding: 0px;
+    }
+
+    .navbar {
+        flex-direction: row;
+    }
+    
+    /* Diseño de Nav */
+    nav{
+        background-color: #9D0208;
+        height: 50px;
+    }
+    
+    nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    nav ul li{
+        background-color: transparent;
+        margin: 0px;
+        width: 15%;
+        font-size: 20px;
+    }
+
+    ::placeholder{
+        color: transparent;   /*Le quitamos lo que dice dentro*/
+    }
+
+    /* Diseño de Home */
+    .tit1{
+        width: auto;
+        margin: 10px;
+    }
+
+    .renglon{
+        display: flex;
+        gap: 200px;
+        margin: 10px;
+    }
+
+    .renglon2home {
+        display: flex;
+        gap: 150px;
+        margin: 10px;
+    }
+
+    .renglon3home {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+        width: auto;
+    }
+    .section1, .section2{
+        width: 1000%;
+        margin: 0px;
+        border: none;
+    }
+
+    .section2{
+        flex-direction: row;
+    }
+
+    .cancion1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section2 .colInfo{
+        text-align: left;
+    }
+    
+    /* Lista de DJs */
+    .sectiondj{
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+    }
+
+    .artistas{
+        height: 200px;
+        width: 300px;
+    }
+
+    /* Lista Albumes */
+    .secalbum{
+        margin: 5px 5% 0px 0px;
+        width: 40%;
+    }
+
+    /* Diseño de Generos */
+    .generos{
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .generos h2{
+        font-size: 20px;
+    }
+
+    .gen{
+        width: 30%;
+    }
+
+    .gen img, .genAd img{
+        height: 250px;
+    }
+
+    .genAd{
+        display: inline;
+        width: 30%;
+    }
+
+    /* Diseño Playlist */
     .headPL h1{
         font-size: 30px;
     }
@@ -812,179 +896,12 @@ footer{
         width: 20%;
         padding: 10px;
     }
-@media (min-width: 1024px){
-  
-    .navbar {
-        flex-direction: row;
-    }    
+
     .adicionalPL {
         display: inline; 
     }
-}
 
-/* Media Querie Header */
-@media (min-width: 1024px) {
-    header{
-        padding: 0px;
-    }
-}
-
-/* Media Querie Nav */
-@media (min-width: 1024px) {
-    nav{
-        background-color: #9D0208;
-        height: 50px;
-    }
-    
-    nav ul{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: auto;
-
-    }
-
-    nav ul li{
-        background-color: transparent;
-        margin: 0px;
-        width: 15%;
-        font-size: 20px;
-    }
-
-    /* form{
-        display: flex;
-        justify-content: flex-start;
-    }
-        align-items: center;
-        height: 100px;
-        width: 16%;
-        background-color:yellow;
-    }    
-
-    .button{
-        background-color: transparent;
-        height: 70px;
-        width: 70px;
-    form{
-        display: inline;
-    }
-
-    ::placeholder{
-        color: transparent;   /*Le quitamos lo que dice dentro*/
-    }
-}
-
-/* Media Querie Footer */  
-@media (min-width:1024px){
-    /* Reservado para Valentin */
-}
-
-/* Media Querie Home */
-@media (min-width:1024px){
-    .tit1{
-        width: auto;
-        margin: 10px;
-    }
-
-    .renglon{
-        display: flex;
-        gap: 200px;
-        /* justify-content: space-between; */
-        margin: 10px;
-    }
-
-    .renglon2home {
-        display: flex;
-        gap: 150px;
-        /* justify-content: space-between; */
-        margin: 10px;
-        /* width: 100%; */
-        /* border: solid brown; */
-    }
-
-    .renglon3home {
-        display: flex;
-        /* gap: 100px; */
-        justify-content: space-between;
-        margin: 10px;
-        /* width: 100%; */
-        /* border: solid brown; */
-    }
-    .section1, .section2{
-        width: 1000%;
-        margin: 0px;
-        border: none;
-    }
-
-    .section2{
-        flex-direction: row;
-    }
-
-    /* .section1 img, .section2 img{
-        width: 190px;
-    } */
-
-    .cancion1 {
-        width: 150px;
-        height: 150px;
-    }
-
-    .section2 .colInfo{
-        text-align: left;
-    }
-
-    /* .globaltracks {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    } */
-    
-    /* Lista de DJs */
-    .sectiondj{
-        display: flex;
-        flex-direction: column;
-        width: 33%;
-    }
-
-    .artistas{
-        height: 200px;
-        width: 300px;
-    }
-
-    /* Lista Albumes */
-    .secalbum{
-        /* background-color: hotpink; */
-        margin: 5px 5% 0px 0px;
-        width: 40%;
-    }
-}
-/* Media Querie Generos */
-@media (min-width:1024px){
-    .generos{
-        width: 100%;
-        justify-content: space-between;
-    }
-    
-    .generos h2{
-        font-size: 20px;
-    }
-
-    .gen{
-        width: 30%;
-    }
-
-    .gen img, .genAd img{
-        height: 250px;
-    }
-
-    .genAd{
-        display: inline;
-        width: 30%;
-    }
-}
-
-/* Media Querie Detalles de Genero */
-@media (min-width:1024px){
+    /* Diseño Detalle de Generos */
     .artdetailgen{
         align-items: flex-end;
     }
@@ -1009,29 +926,19 @@ footer{
         height: 40px;
         font-size: 15px;
     }
-}
 
-/* Media Querie Detalles de Canciones */
-@media (min-width:1024px){    
+    /* Diseño de Detalles de Canciones */
     .info1{
         width: 50%;
         margin: 10px 0px 0px 0px;
         border: none;
     }
 
-
     .tit2{
         margin-top: 10px;
     }
 
-}
-
-/* Media Querie Detalles de Artistas */
-@media (min-width:1024px){
-    /* .djarticle{
-        width: 50%;
-    } */
-
+    /* Diseño Detalles de Artistas */
     .toptracks{
         font-size: 25px;
     }
@@ -1042,11 +949,9 @@ footer{
 
     .artistasimg{
         max-width: 170px;
-    } 
-}
+    }
 
-/* Media Querie Detalles de Albumes */
-@media (min-width:1024px){
+    /*  Diseño Detalles de Albumes*/
     .sectiondiscos ul li{
         width: 50%;
         margin-top:7px;
@@ -1069,17 +974,14 @@ footer{
         width: 50%;
         flex-direction: row;
     }
-}
 
-/* Media Querie de Resultados de Busqueda */
-@media (min-width:1024px){
+    /* Diseño de Resultado de Busqueda */
     .TitMusic, .audio{
         width: auto;
         margin: 10px;
     }
     
     .busquedademusica{
-        /* background-color: indigo; */
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
@@ -1095,8 +997,4 @@ footer{
     .pBusqueda p{
         font-size: 25px;
     }
-
 }
-
-
-/* Caca Culo Pis */
