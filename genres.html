@@ -5,36 +5,44 @@
     <link rel="stylesheet" href="styles/estilos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generos |</title>
+    <title>Genres |</title>
 </head>
 <body>
     <header>
+        <div class="logo1">
+            <img  class="logoneon1" src="images/logoneon.jpg" alt="">
+        </div>
+
         <nav>
+            <div class="logo2">
+                <img  class="logoneon2" src="images/logoneon.jpg" alt="">
+            </div>
+
             <ul>
                 <li><a href="home.html">HOME</a></li>
-                    <li> <a href="playlist.html">PLAYLIST</a></li>
-                    <li> <a href="genres.html">GENEROS</a></li>
-                    <li> <a href="detail-track.html">DETALLES DE ALBUM</a></li>
-                    <li> <a href="detail-genre.html">DETALLES DE GENERO</a></li>
+                <li><a href="playlist.html">PLAYLIST</a></li>
+                <li><a href="genres.html">GENRES</a></li>
+                <li><a href="detail-album.html">ALBUM DETAILS</a></li>
+                <li><a href="detail-genre.html">GENRE DETAILS</a></li>
                 <form action="search-results.html" method="GET"  role="search">
                     <p class="Busqueda">
                         <button class="button" type="submit">
                             <i class="fas fa-search" ></i>
                         </button>
-                        <input class="CuadrodeBusqueda" type="text" name="busquedademsuica" placeholder="Cancion, autor, album...">
+                        <input class="CuadrodeBusqueda" type="text" name="busquedademsuica" placeholder="Song, author, album...">
                     </p>
                 </form>
             </ul>
         </nav>
     </header>
 
-    <h1 class="tit3">Generos</h1>
-    <h2 class="tit4">Escuchados recientemente</h2>
+    <h1 class="tit3">Genres</h1>
+    <h2 class="tit4">Recently Heard</h2>
     
     <div class="generos">
         <div class="gen">
             <img src="images/rocknacional.jpg" alt="">
-            <h2>Rock Nacional</h2>
+            <h2>Argentine Rock</h2>
         </div>
 
         <div class="gen">
@@ -44,18 +52,18 @@
 
         <div class="genAd">
             <img src="images/rock70.jpg" alt="">
-            <h2>Rock 70s</h2>
+            <h2>70s Rock</h2>
         </div>
     </div>
 
     <br>
     <br>
 
-    <h2 class="tit4">Mas Escuchados</h2>
+    <h2 class="tit4">Most Heard</h2>
     <div class="generos">
         <div class="gen">
             <img src="images/rock70.jpg" alt="">
-            <h2>Rock 70s</h2>
+            <h2>70s Rock</h2>
         </div>
 
         <div class="gen">
@@ -72,11 +80,11 @@
     <br>
     <br>
 
-    <h2 class="tit4">Populares</h2>
+    <h2 class="tit4">Popular</h2>
     <div class="generos">
         <div class="gen">
             <img src="images/DJs.jpg" alt="">
-            <h2>Electronica</h2>
+            <h2>Electro</h2>
         </div>
 
         <div class="gen">
@@ -97,13 +105,14 @@
 <footer>
     <ul class="terminos">
         <a class="miniterminos" href="home.html"> Home </a>
-        <a class="miniterminos" href="detail-track.html"> Detalles </a>
-        <a class="miniterminos" href="playlist.html"> Playlist </a>
-        <a class="miniterminos" href="genres.html"> Generos </a>
-        <a class="miniterminos" href="detail-genre.html"> Detalles de Generos</a>
+            <a class="miniterminos" href="detail-track.html"> Playlist </a>
+            <a class="miniterminos" href="playlist.html"> Genres </a>
+            <a class="miniterminos" href="genres.html"> Album Details </a>
+            <a class="miniterminos" href="detail-genre.html"> Genre Details </a>
     </ul>
-    <p id="copyright"> Copyright ReVibe 2020. 
-        Todos los derechos reservados © </p>
+
+    <p id="copyright"> Copyright ReVibe 2020. All Rights Reserved © </p>
+
     <div class="socialmedia">
         <a href="" class="logosocialmedia"> <i id="RS" class="fab fa-instagram"></i></a>
         <a href="" class="logosocialmedia"> <i id="RS" class="fab fa-facebook-square"></i></a>
