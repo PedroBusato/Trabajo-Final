@@ -13,7 +13,7 @@ a {
 }
 
 body{
-    background-color: rgb(30, 30, 30);
+    background-color: #09000c;
     width: 100%; 
 }
 
@@ -25,10 +25,12 @@ header{
     justify-content: center;
     padding: 10px;
     width: 100%;
+    
 }   
 
 nav{
     width: 100%;
+    
 }
 
 ul, ul a{
@@ -38,16 +40,17 @@ ul, ul a{
 }
 
 nav ul li{
-    background-color:  rgb(239, 76, 39);
+    background-color:  #9D0208;
     margin-top: 3px;
     margin-bottom: 5px;
     padding: 3px;
     text-align: center;
     border-radius: 10px;
+    justify-content: center;
 }
 
 form, .button {
-    background-color:  rgb(239, 76, 39);
+    background-color:  #9D0208;
     color: Black;
     border: none;
     text-align: center;
@@ -62,7 +65,7 @@ form, .button {
 }
 
 .CuadrodeBusqueda {
-    background-color: brown;
+    background-color: #9D0208;
     border: none;
     padding: 3px;
     border-radius: 10px;
@@ -74,10 +77,21 @@ form, .button {
 }
 
 
+/* .logoneon {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+   
+} */
+
+
+
+
+
 /* Comenzamos con los diseños de los HTML */
 /* Diseño Home */
 .tit1{
-    background-color: brown;
+    background-color: #96009d;
     padding: 5px;
     margin: 10px;
     border-radius: 15px;
@@ -105,7 +119,7 @@ p {
 }
 
 .section1, .section2 {
-    border: dashed 1px rgb(239, 76, 39);
+    border: dashed 1px #96009d;
     border-radius: 3%;
     align-items: center;
     padding-bottom: 15px;
@@ -142,15 +156,28 @@ p {
 /* Diseño de los DJs del Home */
 .sectiondj {
     width: 100%;  /*De esta manera el ancho ocupa el 100% del body*/
+
 }
 
 .djname{
     margin-bottom: 10px;
     padding-left: 10px;
+    background: linear-gradient(100deg, #c302d5,Black);
+
+    /* background-color: white; */
+    border-radius: 5%;
+    width: 100%;
+    /* height: 300px; */
+    margin-top: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    border:solid 10px #96009d;
+
 }
 
 .djname a{     /*Cambia el color de hipervinculos de los artistas/DJs nomas.*/
-    color: rgb(239, 76, 39);
+    color: White;
 }
 
 .artistas {
@@ -160,6 +187,7 @@ p {
     padding-right: 10px;
     padding-left: 10px;
     border-radius: 5%;
+
 }
 
 /* Diseño de los Albumes del Home*/
@@ -175,7 +203,7 @@ p {
     width: 95%;
     margin: 3px;
     padding: 5px;
-    border: dashed rgb(239, 76, 39);
+    border: dashed #96009d;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -186,7 +214,7 @@ p {
     margin: 3px;
     padding: 5px;
     width: 95%;
-    border: dotted  rgb(0, 0, 77);
+    border: dotted  #c302d5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -196,13 +224,13 @@ p {
 .album1 {
     margin: 3px;
     padding: 5px;
-    border: solid brown;
+    border: solid #350143;
     width: 95%;
     height: 300px;
 }
 
 .albumtext, .albumtext a {
-    color: rgb(239, 76, 39);
+    color: white;
 }
 
 
@@ -228,8 +256,7 @@ p {
     flex-direction: row-reverse;
     align-items: center;
     width: 100%;
-    border: solid brown;
-}
+    border: solid #96009d}
 
 .imgalbums {
     width: 45%;
@@ -237,8 +264,7 @@ p {
     margin: 10px;
     padding: 3px;
     border-radius: 2%;
-    border: solid brown;
-}
+    border: solid #96009d}
 
 .datosalbum {
     font-size: 17px;
@@ -324,7 +350,7 @@ p {
     align-items: center;
     margin-right: 10px;
     margin-left: 10px;
-    border: dashed brown;
+    border: dashed  #96009d;
     padding: 10px;
 }
 
@@ -343,7 +369,7 @@ p {
     margin: 10px;
     padding: 3px;
     border-radius: 15px;
-    border: solid brown;
+    border: solid #c302d5;
 }
 
 .datosdetgen {
@@ -373,7 +399,7 @@ li {
 
 .sectiondetailgen ul li{   
     background-color:  rgba(0, 0, 0, 0.7);
-    color: rgb(239, 76, 39);
+    color: #c302d5;
     margin-top: 3px;
     margin-bottom: 5px;
     padding: 3px;
@@ -398,7 +424,7 @@ li {
 }
 
 .info1{
-    border: dashed 1px rgb(239, 76, 39);
+    border: dashed 1px  #96009d;;
     border-radius: 3%;
     display: flex;
     margin: 15px 10px 25px 10px;
@@ -419,7 +445,7 @@ li {
 }
 
 .info1 p{
-    color: rgb(224, 96, 64);
+    color: #c302d5;
     padding-top: 3px;
 }
 
@@ -438,14 +464,14 @@ li {
 }
 
 .miMusica{
-    color: rgb(224, 96, 64);
+    color: #c302d5;
     text-align: end;
     margin-top: 5px;
     padding: 3px;
 }
 
 #icono, .miMusica a{
-    color: rgb(224, 96, 64);
+    color: #c302d5;
 }
 
 .reproductor{
@@ -478,7 +504,7 @@ li {
 }
 
 .headPL h2{
-    background-color:  rgb(239, 76, 39);
+    background-color:  #9D0208;
     padding: 4px;
     text-align: center;
     margin: 15px 10px 25px 10px;
@@ -588,6 +614,7 @@ li {
     border-radius: 30px;
     background-image: url(../images/fondo\ search.jpeg);
 }
+
 .secalbum {
     display: flex;
     flex-direction: column;
@@ -712,44 +739,127 @@ footer{
     background-color: black;
 }
 
-/* Diseño Detalles de Genero */ /*Preguntar de donde salio esto?!*/
-.titDisco{
-    margin-left: 10px;
-    color: white;
-}
-
-.infoDisco{
-    background-color: blueviolet;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.infoDisco h2{
-    color: white;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.infoDisco p{
-    background-color: yellow;
-    color: white;
-    padding-top: 5px;
-}
-
-.headDisco{
-    background-color: aqua;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.headDisco img{
-    width: 50%;
-}
-
 /* Por comodidad hacemos los Media Queries en distintos pero luego los juntamos */
 /* Media Querie de playlist.html */
 @media (min-width:1024px){
+    /* Diseño del Header */
+    header{
+        padding: 0px;
+    }
+
+    .navbar {
+        flex-direction: row;
+    }
+    
+    /* Diseño de Nav */
+    nav{
+        background-color: #9D0208;
+        height: 50px;
+    }
+    
+    nav ul{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    nav ul li{
+        background-color: transparent;
+        margin: 0px;
+        width: 15%;
+        font-size: 20px;
+    }
+
+    ::placeholder{
+        color: transparent;   /*Le quitamos lo que dice dentro*/
+    }
+
+    /* Diseño de Home */
+    .tit1{
+        width: auto;
+        margin: 10px;
+    }
+
+    .renglon{
+        display: flex;
+        gap: 200px;
+        margin: 10px;
+    }
+
+    .renglon2home {
+        display: flex;
+        gap: 150px;
+        margin: 10px;
+    }
+
+    .renglon3home {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+        width: auto;
+    }
+    .section1, .section2{
+        width: 1000%;
+        margin: 0px;
+        border: none;
+    }
+
+    .section2{
+        flex-direction: row;
+    }
+
+    .cancion1 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .section2 .colInfo{
+        text-align: left;
+    }
+    
+    /* Lista de DJs */
+    .sectiondj{
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+    }
+
+    .artistas{
+        height: 200px;
+        width: 300px;
+    }
+
+    /* Lista Albumes */
+    .secalbum{
+        margin: 5px 5% 0px 0px;
+        width: 40%;
+    }
+
+    /* Diseño de Generos */
+    .generos{
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .generos h2{
+        font-size: 20px;
+    }
+
+    .gen{
+        width: 30%;
+    }
+
+    .gen img, .genAd img{
+        height: 250px;
+    }
+
+    .genAd{
+        display: inline;
+        width: 30%;
+    }
+
+    /* Diseño Playlist */
     .headPL h1{
         font-size: 30px;
     }
@@ -786,179 +896,12 @@ footer{
         width: 20%;
         padding: 10px;
     }
-@media (min-width: 1024px){
-  
-    .navbar {
-        flex-direction: row;
-    }    
+
     .adicionalPL {
         display: inline; 
     }
-}
 
-/* Media Querie Header */
-@media (min-width: 1024px) {
-    header{
-        padding: 0px;
-    }
-}
-
-/* Media Querie Nav */
-@media (min-width: 1024px) {
-    nav{
-        background-color:  rgb(239, 76, 39);
-        height: 50px;
-    }
-    
-    nav ul{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: auto;
-
-    }
-
-    nav ul li{
-        background-color: transparent;
-        margin: 0px;
-        width: 15%;
-        font-size: 20px;
-    }
-
-    /* form{
-        display: flex;
-        justify-content: flex-start;
-    }
-        align-items: center;
-        height: 100px;
-        width: 16%;
-        background-color:yellow;
-    }    
-
-    .button{
-        background-color: transparent;
-        height: 70px;
-        width: 70px;
-    form{
-        display: inline;
-    }
-
-    ::placeholder{
-        color: transparent;   /*Le quitamos lo que dice dentro*/
-    }
-}
-
-/* Media Querie Footer */  
-@media (min-width:1024px){
-    /* Reservado para Valentin */
-}
-
-/* Media Querie Home */
-@media (min-width:1024px){
-    .tit1{
-        width: auto;
-        margin: 10px;
-    }
-
-    .renglon{
-        display: flex;
-        gap: 200px;
-        /* justify-content: space-between; */
-        margin: 10px;
-    }
-
-    .renglon2home {
-        display: flex;
-        gap: 150px;
-        /* justify-content: space-between; */
-        margin: 10px;
-        /* width: 100%; */
-        /* border: solid brown; */
-    }
-
-    .renglon3home {
-        display: flex;
-        /* gap: 100px; */
-        justify-content: space-between;
-        margin: 10px;
-        /* width: 100%; */
-        /* border: solid brown; */
-    }
-    .section1, .section2{
-        width: 1000%;
-        margin: 0px;
-        border: none;
-    }
-
-    .section2{
-        flex-direction: row;
-    }
-
-    /* .section1 img, .section2 img{
-        width: 190px;
-    } */
-
-    .cancion1 {
-        width: 150px;
-        height: 150px;
-    }
-
-    .section2 .colInfo{
-        text-align: left;
-    }
-
-    /* .globaltracks {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    } */
-    
-    /* Lista de DJs */
-    .sectiondj{
-        display: flex;
-        flex-direction: column;
-        width: 33%;
-    }
-
-    .artistas{
-        height: 200px;
-        width: 300px;
-    }
-
-    /* Lista Albumes */
-    .secalbum{
-        /* background-color: hotpink; */
-        margin: 5px 5% 0px 0px;
-        width: 40%;
-    }
-}
-/* Media Querie Generos */
-@media (min-width:1024px){
-    .generos{
-        width: 100%;
-        justify-content: space-between;
-    }
-    
-    .generos h2{
-        font-size: 20px;
-    }
-
-    .gen{
-        width: 30%;
-    }
-
-    .gen img, .genAd img{
-        height: 250px;
-    }
-
-    .genAd{
-        display: inline;
-        width: 30%;
-    }
-}
-
-/* Media Querie Detalles de Genero */
-@media (min-width:1024px){
+    /* Diseño Detalle de Generos */
     .artdetailgen{
         align-items: flex-end;
     }
@@ -983,28 +926,19 @@ footer{
         height: 40px;
         font-size: 15px;
     }
-}
 
-/* Media Querie Detalles de Canciones */
-@media (min-width:1024px){    
+    /* Diseño de Detalles de Canciones */
     .info1{
         width: 50%;
         margin: 10px 0px 0px 0px;
         border: none;
     }
 
-
     .tit2{
         margin-top: 10px;
     }
-}
 
-/* Media Querie Detalles de Artistas */
-@media (min-width:1024px){
-    /* .djarticle{
-        width: 50%;
-    } */
-
+    /* Diseño Detalles de Artistas */
     .toptracks{
         font-size: 25px;
     }
@@ -1015,11 +949,9 @@ footer{
 
     .artistasimg{
         max-width: 170px;
-    } 
-}
+    }
 
-/* Media Querie Detalles de Albumes */
-@media (min-width:1024px){
+    /*  Diseño Detalles de Albumes*/
     .sectiondiscos ul li{
         width: 50%;
         margin-top:7px;
@@ -1042,17 +974,14 @@ footer{
         width: 50%;
         flex-direction: row;
     }
-}
 
-/* Media Querie de Resultados de Busqueda */
-@media (min-width:1024px){
+    /* Diseño de Resultado de Busqueda */
     .TitMusic, .audio{
         width: auto;
         margin: 10px;
     }
     
     .busquedademusica{
-        /* background-color: indigo; */
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
@@ -1068,5 +997,4 @@ footer{
     .pBusqueda p{
         font-size: 25px;
     }
-
 }
