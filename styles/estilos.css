@@ -5,7 +5,6 @@
     box-sizing: border-box;
     font-family: 'Julius Sans One', sans-serif;
     font-weight: bold;
-    /* color: rgb(0, 0, 77); */
 }
 
 a {
@@ -378,10 +377,6 @@ p {
     margin: 10px;
 }
 
-.sectiondetailgen ul {
-    width: 100%;
-}
-
 li {
     display: flex;
     align-items: center;
@@ -515,7 +510,6 @@ li {
 .elemento1PL{
     display: flex;
     align-items: center;
-    /* margin: 0px 10px 5px 10px; */
     padding: 3px;
     height: 75px;
 }
@@ -635,7 +629,6 @@ li {
     margin: 2%;
     color: Black;
     text-decoration: none;
-    font-family: 'Arapey', serif;
     padding-right: 2%;
     padding-left: 2%;
     border-bottom: solid 1px grey;
@@ -763,7 +756,7 @@ footer{
 }
 
 
-/* Media Querie de playlist.html */
+/* Comenzamos con los media Querie */
 @media (min-width:1024px){
     /* Diseño del Header */
     header{
@@ -833,7 +826,7 @@ footer{
 
     .renglon2home {
         display: flex;
-        gap: 150px;
+        gap: 150px;        /*Genera un espacio semejante al margin estre los elementos dentro del contenedor padre*/
         margin: 10px;
     }
 
@@ -843,6 +836,7 @@ footer{
         margin: 10px;
         width: auto;
     }
+
     .section1, .section2{
         width: 100%;
         margin: 0px;
@@ -955,11 +949,7 @@ footer{
     }
 
     .imgdetailgenre{
-    height: 270px;
-    }
-
-    .sectiondetailgen ul{
-        flex-direction: row;
+        height: 270px;
     }
 
     .sectiondetailgen ul li{
