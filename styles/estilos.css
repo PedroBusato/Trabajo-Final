@@ -167,13 +167,13 @@ p {
     margin-bottom: 10px;
     padding-left: 10px;
     background: linear-gradient(100deg, #c302d5,Black);
-    border-radius: 5%;
+    border-radius: 10px;
     width: 100%;
     margin-top: 15px;
     padding-right: 10px;
     padding-left: 10px;
     text-align: center;
-    border:solid 10px #96009d;
+    border:solid 5px #96009d;
 
 }
 
@@ -215,7 +215,7 @@ p {
     margin: 3px;
     padding: 5px;
     width: 95%;
-    border: dotted  #c302d5;
+    border: dotted  #9D0208;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -919,7 +919,7 @@ footer{
         width: auto;
         height: 90px;
         margin: 0px 10px 0px 10px;
-        border-top: dashed 5px rgba(255,255,255,0.1);
+        border-top: dashed 1px rgba(100, 100, 100);
     }
 
     .elemento1PL p{
