@@ -136,6 +136,13 @@ p {
     margin: 10px 10px 0px 10px;
 }
 
+.colFotos img{
+    height: 130px;
+    width: 100%;
+    max-width: 150px;
+    border-radius: 5%;
+}
+
 .section1 .colInfo, .section2 .colInfo{
     padding-left: 15px;
     padding-right: 15px;
@@ -148,13 +155,6 @@ p {
 .section1 a, .section2 a, footer a{
     text-decoration: none;
     color: white;
-}
-
-.cancion1 {
-    height: 130px;
-    width: 100%;
-    max-width: 150px;
-    border-radius: 5%;
 }
 
 /* Diseño de los DJs del Home */

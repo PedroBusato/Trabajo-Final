@@ -8,13 +8,14 @@ window.addEventListener("load", function(){                 //Permite que cargue
         })
 
         .then (function(datos){
+            // console.log(datos)
             let queryString = (location.search);
             let queryStringObj = new URLSearchParams (queryString);
             let resultadoBusqueda = queryStringObj.get("busquedademusica");     //Buscamos el elemento dentro del queryString
             
-            if(resultadoBusqueda.length == 0){
+            if(resultadoBusqueda.length == 0){ //Preguntar como hacer para que no me redireccione !!]
                 alert("La busqueda esta vacia! Intente nuevamente!")
-            
+
             } else if(resultadoBusqueda.length < 3){
                 alert("La busqueda debe contener al menos 3 caracteres! Intente nuevamente!")
             
