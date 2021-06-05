@@ -8,7 +8,7 @@ window.addEventListener("load", function(){                 //Permite que cargue
         })
 
         .then (function(datos){
-            // console.log(datos)
+            console.log(datos)
             let queryString = (location.search);
             let queryStringObj = new URLSearchParams (queryString);
             let resultadoBusqueda = queryStringObj.get("busquedademusica");     //Buscamos el elemento dentro del queryString

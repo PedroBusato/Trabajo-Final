@@ -1,8 +1,8 @@
 window.addEventListener("load", function(){               
     const proxy = `https://cors-anywhere.herokuapp.com/`;
-    const api = `${proxy}https://api.deezer.com/genre/122/artists`;             //API para artistas de reggeton!
+    const apiREG = `${proxy}https://api.deezer.com/genre/122/artists`;             //API para artistas de reggeton!
 
-    fetch(api)                                                                  //Con fetch tomamos la informacion de la API
+    fetch(apiREG)                                                                  //Con fetch tomamos la informacion de la API
         .then (function(response){
             return (response.json());
         })
@@ -27,5 +27,28 @@ window.addEventListener("load", function(){
         .catch (function(error){
             console.log("El error es: " + error)
         })
+    
+    
+    const apiDJ = `${proxy}https://api.deezer.com/genre/106/artists`;
+    fetch(apiDJ)                                                                  //Con fetch tomamos la informacion de la API
+        .then (function(response){
+            return (response.json());
+        })
 
+        .then (function(datos){
+            console.log(datos)
+            let sectionsDj = document.querySelectorAll(".sectiondj");
+            console.log(sectionsDj)
+            for (let j = 0; j<sectionsDj.length; j+=1){
+                sectionsDj[j].innerHTML += `
+                <img src="${datos.data[j].picture_medium}">
+                <h2 class="djname">${datos.data[j].name}</h2>
+                `
+            }
+        })
+
+        .catch (function(error){
+            console.log("El error es: " + error)
+        })
 })
+
