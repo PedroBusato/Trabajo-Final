@@ -605,6 +605,10 @@ li {
     border-radius: 5%;
 }
 
+.ImgBusqueda img{
+    width: 100%;
+}
+
 .TitMusic {
     width: 100%;
     color:black;
