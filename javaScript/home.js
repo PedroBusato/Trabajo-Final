@@ -50,5 +50,21 @@ window.addEventListener("load", function(){
         .catch (function(error){
             console.log("El error es: " + error)
         })
+
+
+        
+    const apiTracks = `${proxy}https://api.deezer.com/chart/122/tracks`;
+    fetch(apiTracks)                                                                  //Con fetch tomamos la informacion de la API
+            .then (function(response){
+                return (response.json());
+            })
+    
+            .then (function(datos){
+                console.log(datos);
+            })
+    
+            .catch (function(error){
+                console.log("El error es: " + error)
+            })
 })
 
