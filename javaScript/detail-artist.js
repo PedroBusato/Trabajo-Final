@@ -11,18 +11,18 @@ window.addEventListener("load", function(){
         return response.json()
     })
 
-    .then(function(datos){
+    .then(function(datos){           
         console.log(datos)
-        document.querySelector(".djarticle").innerHTML = `
+        document.querySelector(".djarticle").innerHTML += `
         <h2 class="djname">${datos.name}</h2>
-        <img src="${datos.picture_medium} alt="david guetta" class="artistasimg">
+        <img src="${datos.picture_medium}" class="artistasimg">
         <div class="seguirdj">
             <i id="icono" class="fas fa-plus-circle"></i>
             <p class="seguir">Seguir</p>
         </div>
         <p class="toptracks">Top Tracks</p>
         `;
-        fetch (`${proxy}https://api.deezer.com/artist/${idParaFetch}/top`)                              //Ahora vamos a buscar las top 5 canciones de nuestro artista
+        fetch (`${proxy}https://api.deezer.com/artist/${idParaFetch}/top`)    //Fetch para agarrar el top 5 canciones del artista!                          //Ahora vamos a buscar las top 5 canciones de nuestro artista
 
         .then(function(response2){
             return response2.json()
