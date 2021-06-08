@@ -116,6 +116,20 @@ window.addEventListener("load", function(){
         .catch(function(error){
             console.log("El error es: " + error)
         })
+
+        const myform = document.querySelector(`#myform`)
+        const inputbuscador = document.querySelector(`.CuadrodeBusqueda`)
+        const msgerror = document.querySelector(`.msgerror`)
+
+        myform.addEventListener(`submit`, OnSubmit)
+
+        function OnSubmit (e) {
+            e.preventDefault();
+            
+            if(inputbuscador.value === '') {
+                msgerror.innerHTML = 'Por favor, introduzca texto';
+            }
+        }
 })
 
 
