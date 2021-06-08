@@ -128,6 +128,8 @@ window.addEventListener("load", function(){
             
             if(inputbuscador.value === '') {
                 msgerror.innerHTML = 'Por favor, introduzca texto';
+            } else {
+                window.location.href = "search-results.html"
             }
         }
 })
