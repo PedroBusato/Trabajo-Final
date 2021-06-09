@@ -35,5 +35,21 @@ window.addEventListener("load", function(){                 //Permite que cargue
             return ("El error es: " + error)
         })
 
+        const myform = document.querySelector(`#myform`)
+        const inputbuscador = document.querySelector(`.CuadrodeBusqueda`)
+        const msgerror = document.querySelector(`.msgerror`)
+
+        myform.addEventListener(`submit`, OnSubmit)
+
+        function OnSubmit (e) {
+            e.preventDefault();
+            
+            if(inputbuscador.value === '' || inputbuscador.value.length <= 2) {
+                msgerror.innerHTML = 'Por favor, introduzca texto';
+            } else {
+                window.location.href = "search-results.html"
+            }
+        }
+
         
 });
