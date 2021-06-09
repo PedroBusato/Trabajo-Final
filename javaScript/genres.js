@@ -1,21 +1,23 @@
 window.addEventListener("load", function(){               
-    let queyString = location.search;
-    let queryStringObj = new URLSearchParams(queyString);
-    let idCancion = queryStringObj.get("idCancion")
+    let idGenre = location.search;
+    let idGenreObj = new URLSearchParams(idGenre);
+    let idGen = idGenreObj.get("idCancion")
     
     const proxy = `https://cors-anywhere.herokuapp.com/`;
     
-    console.log(idCancion)
+    console.log(idGen)
 
-    fetch (`${proxy}https://api.deezer.com/track/${idCancion}`)
+    fetch (`${proxy}https://api.deezer.com/genre/${idGen}`)
     .then(function(response){
         return response.json()
     })
 
     .then(function(datos){
         console.log(datos)
-        let insertarFoto = document.querySelector(".colFotos");
-        insertarFoto.innerHTML = `<img class="disco1" src="${datos.album.cover}">`
+        let insertarFoto = document.querySelector(".gen");
+        insertarFoto.innerHTML = `
+        <img class="disco1" src="${datos..cover}">
+        <h2>${}</h2>`
         
         let insertarInfo = document.querySelector(".infoJavaScript");
         insertarInfo.innerHTML += `

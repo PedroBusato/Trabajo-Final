@@ -117,43 +117,39 @@ window.addEventListener("load", function(){
             console.log("El error es: " + error)
         })
 
-<<<<<<< HEAD
         
-=======
-        // ---- JavaScript para el formulario ---- //
-        const myForm = document.querySelector("#myform")
-        const inputBuscador = document.querySelector(".CuadrodeBusqueda")
-        const msgError = document.querySelector(".msgerror")
-        console.log(inputBuscador.value)
+        // const myForm = document.querySelector("#myform")
+        // const inputBuscador = document.querySelector(".CuadrodeBusqueda")
+        // const msgError = document.querySelector(".msgerror")
+        // console.log(inputBuscador.value)
 
-        if (inputBuscador.value == ""){
-            myForm.addEventListener("submit",function(e){
-                e.preventDefault();
-            })
-            msgError.innerHTML = "Por favor, introduzca texto"
-        } else if((inputBuscador.value).length < 3){
-            myForm.addEventListener("submit",function(e2){
-                e2.preventDefault();
-            })
-        } else {
-            myForm.addEventListener("submit")
-        }
-        
-
-        
-        
-        // myform.addEventListener("submit", OnSubmit)
-
-        // function OnSubmit (e) {
-        //     e.preventDefault();
-            
-        //     if(inputbuscador.value === "") {
-        //         msgerror.innerHTML = "Por favor, introduzca texto";
-        //     } else {
-        //         window.location.href = "search-results.html"
-        //     }
+        // if (inputBuscador.value == ""){
+        //     myForm.addEventListener("submit",function(e){
+        //         e.preventDefault();
+        //     })
+        //     msgError.innerHTML = "Por favor, introduzca texto"
+        // } else if((inputBuscador.value).length < 3){
+        //     myForm.addEventListener("submit",function(e2){
+        //         e2.preventDefault();
+        //     })
+        // } else {
+        //     myForm.addEventListener("submit")
         // }
->>>>>>> af42f3f172e88d829a46bfc2cec798ccf2b531f2
+        
+
+        
+        
+        // // myform.addEventListener("submit", OnSubmit)
+
+        // // function OnSubmit (e) {
+        // //     e.preventDefault();
+            
+        // //     if(inputbuscador.value === "") {
+        // //         msgerror.innerHTML = "Por favor, introduzca texto";
+        // //     } else {
+        // //         window.location.href = "search-results.html"
+        // //     }
+        // // }
 })
 
 

@@ -26,16 +26,17 @@
           <li><a href="genres.html">GENRES</a></li>
           <li><a href="detail-album.html">ALBUM DETAILS</a></li>
           <li><a href="detail-genre.html">GENRE DETAILS</a></li>
-            <form action="search-results.html" method="GET"  role="search">
-                <p class="Busqueda">
-                    <button class="button" type="submit">
-                        <i class="fas fa-search" ></i>
-                    </button>
-                    <input class="CuadrodeBusqueda" type="text" name="busquedademusica" placeholder="Song, author, album...">
-                </p>
-            </form>
-        </ul>
-    </nav>
+            <form action="search-results.html" method="GET" role="search" id="myform">
+                    <p class="Busqueda">
+                        <button class="button" type="submit">
+                            <i class="fas fa-search" ></i>
+                        </button>
+                        <input class="CuadrodeBusqueda" type="text" name="busquedademusica" placeholder="Song, author, album...">
+                    </p>
+                </form>
+            </ul>
+        </nav>
+        <div class="msgerror"></div> <!-- Mensaje: Por favor, introduzca texto -->
   </header>
   
   <br>
@@ -199,5 +200,6 @@
     </div> 
 </footer>
 <script src="javaScript/detail-artist.js"></script>
+<script src="javaScript/header.js"></script>
 </body>
 </html>

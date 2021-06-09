@@ -35,6 +35,8 @@ window.addEventListener("load", function(){                 //Permite que cargue
             return ("El error es: " + error)
         })
 
+
+        // ---- JavaScript para el formulario ---- //
         const myform = document.querySelector(`#myform`)
         const inputbuscador = document.querySelector(`.CuadrodeBusqueda`)
         const msgerror = document.querySelector(`.msgerror`)
