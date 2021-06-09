@@ -14,7 +14,7 @@ window.addEventListener("load", function(){
             let infoLatin = document.querySelectorAll(".latinInfo");                                    //El scope de estas variables es unicamente dentro del .then donde se encuentran
 
             for (let x = 0; x<imagenesLatin.length; x+=1){
-                imagenesLatin[x].innerHTML = `<a href="detail-track.html?nombre=pedro"><img src="${datos.data[x].picture_medium}"></a>`   //Incluimos un queryString para posteriormente, tomarlo desde detail-track.js
+                imagenesLatin[x].innerHTML = `<img src="${datos.data[x].picture_medium}">`   
             }
 
             let idArtista = []                                                                          //Creo un array donde guardo los ID de los artistas
@@ -33,11 +33,11 @@ window.addEventListener("load", function(){
                             
                     .then(function(datos2){                                                             //datos2 es un objeto con un array dentro con las top 5 canciones del artista
                         infoLatin[p].innerHTML += `
-                        <h3>Song: ${datos2.data[0].title}</h3>
+                        <a href="detail-track.html?idCancion=${datos2.data[0].id}"> <h3>Song: ${datos2.data[0].title}</h3> </a> 
                         <p>Album: ${datos2.data[0].album.title}</p>
                         <p>Duration: ${datos2.data[0].duration}s</p>
                         `
-                    })
+                    })                                                                                  //Incluimos un queryString con el "id" de la cancion para posteriormente, tomarlo desde detail-track.js
                             
                     .catch(function(error2){
                         console.log("El error proviene del fetch dentro del otro fetch y es: " + error2)
@@ -57,8 +57,8 @@ window.addEventListener("load", function(){
             })
     
             .then (function(datos){
-                console.log("DJs")
-                console.log(datos)
+                // console.log("DJs")
+                // console.log(datos)
                 let sectionsDj = document.querySelectorAll(".sectiondj");
                 // console.log(sectionsDj)
                 for (let j = 0; j<sectionsDj.length; j+=1){
@@ -82,8 +82,8 @@ window.addEventListener("load", function(){
         })
 
         .then(function(datos){
-            console.log("Artistas del genero All")
-            console.log(datos)
+            // console.log("Artistas del genero All")
+            // console.log(datos)
             let seccionAlbum = document.querySelectorAll(".albumborder");
 
             let idArtista =[]
@@ -99,8 +99,8 @@ window.addEventListener("load", function(){
                     })
 
                     .then (function(datos2){
-                        console.log("Los albumes de los artistas son:")
-                        console.log(datos2)
+                        // console.log("Los albumes de los artistas son:")
+                        // console.log(datos2)
                         seccionAlbum[x].innerHTML +=`
                         <img src="${datos2.data[0].cover_medium}">
                         <h2 class="albumtext">${datos2.data[0].title} </h2>
@@ -117,7 +117,43 @@ window.addEventListener("load", function(){
             console.log("El error es: " + error)
         })
 
+<<<<<<< HEAD
         
+=======
+        // ---- JavaScript para el formulario ---- //
+        const myForm = document.querySelector("#myform")
+        const inputBuscador = document.querySelector(".CuadrodeBusqueda")
+        const msgError = document.querySelector(".msgerror")
+        console.log(inputBuscador.value)
+
+        if (inputBuscador.value == ""){
+            myForm.addEventListener("submit",function(e){
+                e.preventDefault();
+            })
+            msgError.innerHTML = "Por favor, introduzca texto"
+        } else if((inputBuscador.value).length < 3){
+            myForm.addEventListener("submit",function(e2){
+                e2.preventDefault();
+            })
+        } else {
+            myForm.addEventListener("submit")
+        }
+        
+
+        
+        
+        // myform.addEventListener("submit", OnSubmit)
+
+        // function OnSubmit (e) {
+        //     e.preventDefault();
+            
+        //     if(inputbuscador.value === "") {
+        //         msgerror.innerHTML = "Por favor, introduzca texto";
+        //     } else {
+        //         window.location.href = "search-results.html"
+        //     }
+        // }
+>>>>>>> af42f3f172e88d829a46bfc2cec798ccf2b531f2
 })
 
 

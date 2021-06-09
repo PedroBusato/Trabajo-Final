@@ -441,6 +441,11 @@ li {
     justify-content: center;
 }
 
+.info1 .colFotos img{
+    width: 400px;
+    
+}
+
 .info1 .colInfo{
     width: 65%;
 }
