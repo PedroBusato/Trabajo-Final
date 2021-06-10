@@ -241,7 +241,13 @@ p {
 
 /* Comenzamos con los diseños de los Detalles */
 /* Diseño Detalles de Albumes */
-.sectiondiscos {
+.sectionDiscos {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.divDiscos {
     display: flex;
     flex-direction: column;
     margin-right: 10px;
@@ -280,7 +286,7 @@ p {
     color: white;
 }
 
-.sectiondiscos ul li{   
+.albumTracks li{
     background-color:  rgb(0, 0, 77);
     color: rgb(239, 76, 39);
     margin-top: 3px;
@@ -288,6 +294,10 @@ p {
     padding: 3px;
     text-align: center;
     border-radius: 10px;
+}
+
+.esconder {
+    display: none;
 }
 
 /* Diseño de Artistas-DJs */
@@ -410,6 +420,7 @@ li {
 }
 
 .vermas {
+    display: none;
     padding: 5px;
     width: 25%;
     border-radius: 15px;
@@ -969,6 +980,7 @@ footer{
     }
 
     .vermas{
+        display: block;
         height: 40px;
         font-size: 15px;
     }
@@ -998,17 +1010,21 @@ footer{
     }
 
     /*  Diseño Detalles de Albumes*/
-    .sectiondiscos ul li{
+    .divDiscos{
+        width: 70%;
+    }
+
+    .divDiscos ul li{
         width: 50%;
         margin-top:7px;
     }
     
-    .sectiondiscos .vermas{
+    .divDiscos .vermas{
         margin-top: 10px;
         margin-bottom: 30px;
     }
 
-    .sectiondiscos h2{
+    .divDiscos h2{
         margin-top: 10px;
     }
 

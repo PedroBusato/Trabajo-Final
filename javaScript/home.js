@@ -66,7 +66,7 @@ window.addEventListener("load", function(){
                     <a href="detail-artist.html?idDJ=${datos.data[j].id}"> <img src="${datos.data[j].picture_medium}"> </a> 
                     <h2 class="djname">${datos.data[j].name}</h2>
                     `
-                }                                                                                       //En la lines 66 agregamos el queryString con el ID del Dj para que el detail-track.js puede tomarlo para mostrar la info del DJ
+                }                                                                                       //En la lines 66 agregamos el queryString con el ID del Dj para que el detail-artist.js puede tomarlo para mostrar la info del DJ
             })
     
             .catch (function(error){
@@ -75,14 +75,13 @@ window.addEventListener("load", function(){
         
 
         // ---- Fetch para encontrar top albums ---- //
-        const apiAlbumes = `${proxy}https://api.deezer.com/genre/0/artists`;
+        const apiAlbumes = `${proxy}https://api.deezer.com/genre/0/artists`;                            //Del genre "all" buscamos los artistas top dentro de Deezer
         fetch(apiAlbumes)
         .then(function(response){
             return response.json()
         })
 
         .then(function(datos){
-            // console.log("Artistas del genero All")
             // console.log(datos)
             let seccionAlbum = document.querySelectorAll(".albumborder");
 
@@ -101,8 +100,9 @@ window.addEventListener("load", function(){
                     .then (function(datos2){
                         // console.log("Los albumes de los artistas son:")
                         // console.log(datos2)
+
                         seccionAlbum[x].innerHTML +=`
-                        <img src="${datos2.data[0].cover_medium}">
+                        <a href="detail-album.html?idAlbum=${datos2.data[0].id}"> <img src="${datos2.data[0].cover_medium}"> </a>
                         <h2 class="albumtext">${datos2.data[0].title} </h2>
                         `;                                                                              //Usamos siempre data[0] para agarrar la informacion del album top!
                     })

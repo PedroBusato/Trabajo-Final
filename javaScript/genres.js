@@ -16,8 +16,8 @@ window.addEventListener("load", function(){
         console.log(datos)
         let insertarFoto = document.querySelector(".gen");
         insertarFoto.innerHTML = `
-        <img class="disco1" src="${datos..cover}">
-        <h2>${}</h2>`
+        <img class="disco1" src="${datos.cover}">
+        <h2>${datos}</h2>`
         
         let insertarInfo = document.querySelector(".infoJavaScript");
         insertarInfo.innerHTML += `
