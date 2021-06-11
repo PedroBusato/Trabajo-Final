@@ -16,3 +16,4 @@ window.addEventListener("load", function(){
     .catch(function(error){
       console.log("el error fue: "+ error)
     })
+})
