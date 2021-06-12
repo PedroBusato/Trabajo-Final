@@ -45,7 +45,7 @@ window.addEventListener("load", function(){                 //Permite que cargue
 
         function OnSubmit (e) {
             e.preventDefault();
-            
+                              
             if(inputbuscador.value === '' || inputbuscador.value.length <= 2) {
                 msgerror.innerHTML = 'Por favor, introduzca texto';
             } else {
