@@ -14,7 +14,7 @@ window.addEventListener("load", function(){
                     // console.log(sectionsDj)
             for (let j = 1; j<Gen.length; j+=1){
                 Gen[j].innerHTML += `
-                <a href="detail-genre.html?=${datos.data[j].id}"> ${datos.data[j].name}</a>
+                <a href="detail-genre.html?idGenre=${datos.data[j].id}"> ${datos.data[j].name}</a>
                 `
             }                                                                                       //En la lines 66 agregamos el queryString con el ID del Dj para que el detail-artist.js puede tomarlo para mostrar la info del DJ
         })
