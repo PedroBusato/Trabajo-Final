@@ -13,8 +13,12 @@ window.addEventListener("load", function(){
     })
     .then(function(datos){
         console.log(datos);
+        document.querySelector(".tit1").innerHTML += `
+        ${datos.name}`
         document.querySelector(".artdetailgen").innerHTML += `
         <img class="imgdetailgenre" src="${datos.picture_medium}" alt="foto-del-genero">
+        <p class="datosdetgen">Listen now to the most iconic Artist #2021</p>
+
         `;
         fetch (`${proxy}https://api.deezer.com/genre/${idParaGenre}/artists`)    //Fetch para agarrar el top 5 canciones del artista!                          //Ahora vamos a buscar las top 5 canciones de nuestro artista
 
