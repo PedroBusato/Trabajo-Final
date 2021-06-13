@@ -4,7 +4,7 @@ window.addEventListener("load", function(){
     let idAlbum = location.search;
     let idAlbumObj = new URLSearchParams(idAlbum);
     let idParaFetch = idAlbumObj.get("idAlbum");
-    console.log(idParaFetch)
+    // console.log(idParaFetch)
 
     fetch(`${proxy}https://api.deezer.com/album/${idParaFetch}`)
 
@@ -24,11 +24,11 @@ window.addEventListener("load", function(){
         `;
 
         document.querySelector(".albumTracks").innerHTML += `
-        <li>${datos.tracks.data[0].title}</li>
-        <li>${datos.tracks.data[1].title}</li>
-        <li>${datos.tracks.data[2].title}</li>
-        <li>${datos.tracks.data[3].title}</li>
-        <li>${datos.tracks.data[4].title}</li>
+        <a href="detail-track.html?idCancion=${datos.tracks.data[0].id}"> <li>${datos.tracks.data[0].title}</li> </a>
+        <a href="detail-track.html?idCancion=${datos.tracks.data[1].id}"> <li>${datos.tracks.data[1].title}</li> </a>
+        <a href="detail-track.html?idCancion=${datos.tracks.data[2].id}"> <li>${datos.tracks.data[2].title}</li> </a>
+        <a href="detail-track.html?idCancion=${datos.tracks.data[3].id}"> <li>${datos.tracks.data[3].title}</li> </a>
+        <a href="detail-track.html?idCancion=${datos.tracks.data[4].id}"> <li>${datos.tracks.data[4].title}</li> </a>
         `;
         
         let primeraVez = true;
@@ -37,20 +37,21 @@ window.addEventListener("load", function(){
         boton.addEventListener("click",function(){
             if (primeraVez === true){
                 for (let i = 5; i<datos.tracks.data.length; i+=1){
-                    document.querySelector(".albumTracks").innerHTML += `<li class="adicionales">${datos.tracks.data[i].title}</li>`
+                    document.querySelector(".albumTracks").innerHTML += `
+                    <a href="detail-track.html?idCancion=${datos.tracks.data[i].id}"> <li class="tracksAdicionales">${datos.tracks.data[i].title}</li> </a>
+                    `;
                 }
                 primeraVez = false;
 
             } else if (primeraVez === false){
-                let esconder = document.querySelectorAll(".adicionales");
+                let esconder = document.querySelectorAll(".tracksAdicionales");
                 for (let x = 0; x<esconder.length; x+=1){
-                    esconder[x].classList.add("esconder");
+                    esconder[x].classList.add("esconderCanciones");                                              //Les agrego la clase "esconder" que en css tiene display: none;
                 }
                 primeraVez = true
             }
             
         })
-        console.log(datos)
     })
     
     .catch(function(error){

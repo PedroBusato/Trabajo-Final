@@ -1,7 +1,7 @@
 window.addEventListener("load", function(){               
     let queyString = location.search;
     let queryStringObj = new URLSearchParams(queyString);
-    let idCancion = queryStringObj.get("idCancion")
+    let idCancion = queryStringObj.get("idCancion");
     
     const proxy = `https://cors-anywhere.herokuapp.com/`;
     
@@ -15,7 +15,9 @@ window.addEventListener("load", function(){
     .then(function(datos){
         console.log(datos)
         let insertarFoto = document.querySelector(".colFotos");
-        insertarFoto.innerHTML = `<img class="disco1" src="${datos.album.cover}">`
+        insertarFoto.innerHTML = `
+        <img src="${datos.album.cover_xl}">
+        `;
         
         let insertarInfo = document.querySelector(".infoJavaScript");
         insertarInfo.innerHTML += `
@@ -28,23 +30,5 @@ window.addEventListener("load", function(){
     .catch(function(e){
         console.log("El error es: " + e)
     })
-
-    // ---- JavaScript para el formulario ---- //
-    const myform = document.querySelector(`#myform`)
-    const inputbuscador = document.querySelector(`.CuadrodeBusqueda`)
-    const msgerror = document.querySelector(`.msgerror`)
-
-    myform.addEventListener(`submit`, OnSubmit)
-
-    function OnSubmit (e) {
-        e.preventDefault();
-            
-        if(inputbuscador.value === '' || inputbuscador.value.length <= 2) {
-            msgerror.innerHTML = 'Por favor, introduzca texto';
-        } else {
-            window.location.href = "search-results.html"
-        }
-    }
-
 
 })

@@ -1,52 +1,23 @@
-window.addEventListener("load", function(){               
-    let idGenre = location.search;
-    let idGenreObj = new URLSearchParams(idGenre);
-    let idGen = idGenreObj.get("idCancion")
-    
-    const proxy = `https://cors-anywhere.herokuapp.com/`;
-    
-    console.log(idGen)
+// window.addEventListener("load", function(){               
+//     const proxy = `https://cors-anywhere.herokuapp.com/`;
 
-    fetch (`${proxy}https://api.deezer.com/genre/${idGen}`)
-    .then(function(response){
-        return response.json()
-    })
+//     fetch (`${proxy}https://api.deezer.com/genre`)
+//     .then(function(response){
+//         return response.json()
+//     })
 
-    .then(function(datos){
-        console.log(datos)
-        let insertarFoto = document.querySelector(".gen");
-        insertarFoto.innerHTML = `
-        <img class="disco1" src="${datos.cover}">
-        <h2>${datos}</h2>`
-        
-        let insertarInfo = document.querySelector(".infoJavaScript");
-        insertarInfo.innerHTML += `
-        <p>${datos.title}</p>
-        <p>${datos.artist.name}</p>
-        <p>${datos.album.title}</p>
-        `;
-    })
+//     .then(function(datos){
+//         console.log(datos)
+//         let recientes = document.querySelectorAll(".gen");
+//         for (let x = 1; x<recientes.length+1; x+=1){                                                      //Comenzamos el ciclo en 1 ya que el primer genero es "All" y no posee imagen
+//             recientes[x-1].innerHTML += `
+//             <a href="detail-genre.html?idGenero=${datos.data[x].id}"> <img src="${datos.data[x].picture_medium}"> </a>
+//             <h2>${datos.data[x].name}</h2>
+//             `;
+//         }
+//     })
 
-    .catch(function(e){
-        console.log("El error es: " + e)
-    })
-
-    // ---- JavaScript para el formulario ---- //
-    const myform = document.querySelector(`#myform`)
-    const inputbuscador = document.querySelector(`.CuadrodeBusqueda`)
-    const msgerror = document.querySelector(`.msgerror`)
-
-    myform.addEventListener(`submit`, OnSubmit)
-
-    function OnSubmit (e) {
-        e.preventDefault();
-            
-        if(inputbuscador.value === '' || inputbuscador.value.length <= 2) {
-            msgerror.innerHTML = 'Por favor, introduzca texto';
-        } else {
-            window.location.href = "search-results.html"
-        }
-    }
-
-
-})
+//     .catch(function(e){
+//         console.log("El error es: " + e)
+//     })
+// })

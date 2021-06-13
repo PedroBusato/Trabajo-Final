@@ -17,13 +17,16 @@ window.addEventListener("load", function(){
                 imagenesLatin[x].innerHTML = `<img src="${datos.data[x].picture_medium}">`   
             }
 
-            let idArtista = []                                                                          //Creo un array donde guardo los ID de los artistas
+            let idArtista = [];                                                                          //Creo un array donde guardo los ID de los artistas
 
             for (let y = 0; y<infoLatin.length; y+=1){
                 idArtista.push(datos.data[y].id)
                 infoLatin[y].innerHTML += `
-                <h2>Artist: ${datos.data[y].name}</h2>`                                                 //Hasta el momento encontramos la foto del artista y su nombre. Necesitamos el album y la duracion de la cancion!!!
+                <a href="detail-artist.html?idArtista=${datos.data[y].id}"> <h2>Artist: ${datos.data[y].name}</h2> </a>
+                `;                                                                                      //Al trabajar con "datos.data[y].id" en lugar de "datos.data[y].name" nos ahorramos el problema que puede surgir de trabajar con artistas que tengan mas de una palabra en su nombre --> ejemplo: Bad Bunny                                        //Hasta el momento encontramos la foto del artista y su nombre. Necesitamos el album y la duracion de la cancion!!!
             }
+
+            // console.log(idArtista);
 
             for(let p = 0; p<idArtista.length; p+=1){          
                 fetch(`${proxy}https://api.deezer.com/artist/${idArtista[p]}/top`)                      //El ciclo "for" permite hacer un fetch para cada artista, a partir de su ID
@@ -57,15 +60,15 @@ window.addEventListener("load", function(){
             })
     
             .then (function(datos){
-                // console.log("DJs")
-                // console.log(datos)
+                console.log("DJs")
+                console.log(datos)
                 let sectionsDj = document.querySelectorAll(".sectiondj");
                 // console.log(sectionsDj)
                 for (let j = 0; j<sectionsDj.length; j+=1){
                     sectionsDj[j].innerHTML += `
-                    <a href="detail-artist.html?idDJ=${datos.data[j].id}"> <img src="${datos.data[j].picture_medium}"> </a> 
+                    <a href="detail-artist.html?idArtista=${datos.data[j].id}"> <img src="${datos.data[j].picture_medium}"> </a> 
                     <h2 class="djname">${datos.data[j].name}</h2>
-                    `
+                    `;
                 }                                                                                       //En la lines 66 agregamos el queryString con el ID del Dj para que el detail-artist.js puede tomarlo para mostrar la info del DJ
             })
     
@@ -115,41 +118,7 @@ window.addEventListener("load", function(){
 
         .catch(function(error){
             console.log("El error es: " + error)
-        })
-
-        
-        // const myForm = document.querySelector("#myform")
-        // const inputBuscador = document.querySelector(".CuadrodeBusqueda")
-        // const msgError = document.querySelector(".msgerror")
-        // console.log(inputBuscador.value)
-
-        // if (inputBuscador.value == ""){
-        //     myForm.addEventListener("submit",function(e){
-        //         e.preventDefault();
-        //     })
-        //     msgError.innerHTML = "Por favor, introduzca texto"
-        // } else if((inputBuscador.value).length < 3){
-        //     myForm.addEventListener("submit",function(e2){
-        //         e2.preventDefault();
-        //     })
-        // } else {
-        //     myForm.addEventListener("submit")
-        // }
-        
-
-        
-        
-        // // myform.addEventListener("submit", OnSubmit)
-
-        // // function OnSubmit (e) {
-        // //     e.preventDefault();
-            
-        // //     if(inputbuscador.value === "") {
-        // //         msgerror.innerHTML = "Por favor, introduzca texto";
-        // //     } else {
-        // //         window.location.href = "search-results.html"
-        // //     }
-        // // }
+        })            
 })
 
 

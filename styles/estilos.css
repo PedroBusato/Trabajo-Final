@@ -296,7 +296,7 @@ p {
     border-radius: 10px;
 }
 
-.esconder {
+.esconderCanciones {
     display: none;
 }
 
@@ -358,6 +358,32 @@ p {
     align-items: center;
 }
 
+.albumesDj {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.cadaAlbum{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.cadaAlbum img{
+    width: 100%;
+    height: 300px;
+}
+
+.esconderAlbumes {
+    display: none;
+}
+
+.albumName {
+    color: white;
+}
+
 /* Estilos Detalle de Genero */
 .sectiondetailgen {
     display: flex;
@@ -398,6 +424,10 @@ li {
     gap: 10px;
 }
 
+li a{
+    color: white;
+}
+
 .imgbands {
     border-radius: 50%;
     width: 40px;
@@ -420,6 +450,7 @@ li {
 }
 
 .vermas {
+    cursor: pointer;
     display: none;
     padding: 5px;
     width: 25%;
@@ -437,15 +468,15 @@ li {
 
 .info1{
     border: dashed 1px  #96009d;;
-    border-radius: 3%;
     display: flex;
-    margin: 15px 10px 25px 10px;
-    width: auto;
     flex-direction: row;
+    width: 80%;
+    height: 300px;
+    
 }
 
 .info1 .colFotos{      /*Aclaramos que es la "colFotos" unicamente de ".info1"*/
-    width: 35%;
+    width: 50%;
     display: flex;
     margin-right: 10px;
     align-items: center;
@@ -453,24 +484,20 @@ li {
 }
 
 .info1 .colFotos img{
-    width: 400px;
-    
+    width: 100%;
+    height: 100%;
 }
 
 .info1 .colInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     width: 65%;
 }
 
 .info1 p{
     color: #c302d5;
     padding-top: 3px;
-}
-
-.disco1{                   /*.disco1 representa la imagen de cada disco*/
-    height: 125px;
-    width: 100%;
-    border-radius: 5%;
-    margin:0px;
 }
 
 .agregarPlayList{
@@ -988,9 +1015,17 @@ footer{
     /* Diseño de Detalles de Canciones */
     .info1{
         width: 50%;
-        margin: 10px 0px 0px 0px;
+        margin: 10px 0px 55px 0px;
         border: none;
     }
+
+    .info1 .colFotos img{
+        min-width: 270px;
+    }
+
+    .info1 p{
+        font-size: 25px;
+    }    
 
     .tit2{
         margin-top: 10px;
