@@ -4,7 +4,6 @@ window.addEventListener("load", function(){
     let idArtista = location.search;
     let idArtistaObj = new  URLSearchParams(idArtista);
     let idParaFetch = idArtistaObj.get("idArtista");
-
     fetch(`${proxy}https://api.deezer.com/artist/${idParaFetch}`)                                       //No podemos hacer directamente "artist/${idParaFetch}/top" ya que esta segunda API no nos otorga la foto del artista
 
     .then(function(response){

@@ -51,7 +51,5 @@ window.addEventListener("load", function(){                 //Permite que cargue
             } else {
                 window.location.href = `search-results.html?info=${inputbuscador.value}`
             }
-        }
-
-        
+        }  
 });

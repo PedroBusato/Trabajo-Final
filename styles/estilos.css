@@ -296,6 +296,11 @@ p {
     border-radius: 10px;
 }
 
+.albumTracks .cambiarColor{
+    background-color: rgb(239, 76, 39);
+    color: rgb(0, 0, 77);
+}
+
 .esconderCanciones {
     display: none;
 }
@@ -579,6 +584,10 @@ li a{
     padding: 10px;
 }
 
+.eliminar {
+    color: white;
+}
+
 .adicionalPL{
     display: none;   /*Cuando estamos en "mobile" no mostramos esto!*/
 }
@@ -588,7 +597,7 @@ li a{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     padding-right: 10px;
     padding-left: 10px;
     gap: 10px;
@@ -598,7 +607,9 @@ li a{
 .gen{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
+    color: white;
+    font-size: 30px;
 }
 
 .genAd{
@@ -959,7 +970,6 @@ footer{
     .elemento1PL {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         width: auto;
         height: 90px;
         margin: 0px 10px 0px 10px;
@@ -981,7 +991,8 @@ footer{
     }
 
     .infoPL p{
-        width: 20%;
+        width: auto;
+        margin: 0px 10px 0px 10px;
         padding: 10px;
     }
 

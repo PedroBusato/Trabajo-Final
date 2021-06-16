@@ -13,12 +13,13 @@ window.addEventListener("load", function(){
     })
 
     .then(function(datos){
+        console.log(datos)
         document.querySelector(".artdiscos1").innerHTML += `
         <img class="imgalbums" src="${datos.cover_medium}">
         <div class="infodisco">
             <p class="datosalbum">Album - ${datos.title}</p>
-            <p class="datosalbum">Artist - ${datos.artist.name}</p>
-            <p class="datosalbum">Genre - ${datos.genres.data[0].name}</p>
+            <a href="detail-artist.html?idArtista=${datos.artist.id}"> <p class="datosalbum">Artist - ${datos.artist.name}</p> </a>
+            <a href="detail-genre.html?idGenero=${datos.genre_id}"> <p class="datosalbum">Genre - ${datos.genres.data[0].name}</p> </a>
             <p class="datosalbum">Published - ${datos.release_date}</p>
         </div>
         `;
@@ -31,9 +32,8 @@ window.addEventListener("load", function(){
         <a href="detail-track.html?idCancion=${datos.tracks.data[4].id}"> <li>${datos.tracks.data[4].title}</li> </a>
         `;
         
-        let primeraVez = true;
-
         let boton = document.querySelector(".vermas");
+        let primeraVez = true;
         boton.addEventListener("click",function(){
             if (primeraVez === true){
                 for (let i = 5; i<datos.tracks.data.length; i+=1){
@@ -50,12 +50,13 @@ window.addEventListener("load", function(){
                 }
                 primeraVez = true
             }
-            
         })
     })
     
     .catch(function(error){
         console.log("El error es: " + error)
     })
+
+    //Estaria bueno poder agregar diseños a las canciones cuando les pasas el mouse por encima
 
 })

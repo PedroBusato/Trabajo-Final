@@ -34,10 +34,12 @@ window.addEventListener("load", function(){
                         return response2.json();
                     })
                             
-                    .then(function(datos2){                                                             //datos2 es un objeto con un array dentro con las top 5 canciones del artista
+                    .then(function(datos2){       
+                        console.log("Aca panflin")
+                        console.log(datos2)                                                      //datos2 es un objeto con un array dentro con las top 5 canciones del artista
                         infoLatin[p].innerHTML += `
                         <a href="detail-track.html?idCancion=${datos2.data[0].id}"> <h3>Song: ${datos2.data[0].title}</h3> </a> 
-                        <p>Album: ${datos2.data[0].album.title}</p>
+                        <a href="detail-album.html?idAlbum=${datos2.data[0].album.id}"> <p>Album: ${datos2.data[0].album.title}</p> </a>
                         <p>Duration: ${datos2.data[0].duration}s</p>
                         `
                     })                                                                                  //Incluimos un queryString con el "id" de la cancion para posteriormente, tomarlo desde detail-track.js
