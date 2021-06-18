@@ -3,19 +3,22 @@ window.addEventListener("load", function(){                 //Permite que cargue
 
 
         // ---- JavaScript para el formulario ---- //
-        const myform = document.querySelector("#myform");
-        const inputbuscador = document.querySelector(".CuadrodeBusqueda");
-        const msgerror = document.querySelector(".msgerror");
+    const myform = document.querySelector("#myform");
+    const inputbuscador = document.querySelector(".CuadrodeBusqueda");
+    const msgerror = document.querySelector(".msgerror");
 
-        myform.addEventListener("submit", OnSubmit);
+    myform.addEventListener("submit", OnSubmit);
 
-        function OnSubmit (e) {
-            e.preventDefault();
+    function OnSubmit (e) {
+        e.preventDefault();
             
-            if(inputbuscador.value === "" || inputbuscador.value.length <= 2) {
-                msgerror.innerHTML = "Por favor, introduzca texto";
-            } else {
-                window.location.href = `search-results.html?info=${inputbuscador.value}`
-            }
-        }  
+        if(inputbuscador.value === "" || inputbuscador.value.length <= 2) {
+            msgerror.innerHTML = "Por favor, introduzca texto";
+        } else {
+            window.location.href = `search-results.html?idBuscador=${inputbuscador.value}`
+        }
+    }
+          
+    
+    
 });
