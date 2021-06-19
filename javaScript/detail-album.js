@@ -25,11 +25,11 @@ window.addEventListener("load", function(){
         `;
 
         document.querySelector(".albumTracks").innerHTML += `
-        <a href="detail-track.html?idCancion=${datos.tracks.data[0].id}"> <li>${datos.tracks.data[0].title}</li> </a>
-        <a href="detail-track.html?idCancion=${datos.tracks.data[1].id}"> <li>${datos.tracks.data[1].title}</li> </a>
-        <a href="detail-track.html?idCancion=${datos.tracks.data[2].id}"> <li>${datos.tracks.data[2].title}</li> </a>
-        <a href="detail-track.html?idCancion=${datos.tracks.data[3].id}"> <li>${datos.tracks.data[3].title}</li> </a>
-        <a href="detail-track.html?idCancion=${datos.tracks.data[4].id}"> <li>${datos.tracks.data[4].title}</li> </a>
+        <a href="detail-track.html?idCancion=${datos.tracks.data[0].id}"> <li class="cancion">${datos.tracks.data[0].title}</li> </a>
+        <a href="detail-track.html?idCancion=${datos.tracks.data[1].id}"> <li class="cancion">${datos.tracks.data[1].title}</li> </a>
+        <a href="detail-track.html?idCancion=${datos.tracks.data[2].id}"> <li class="cancion">${datos.tracks.data[2].title}</li> </a>
+        <a href="detail-track.html?idCancion=${datos.tracks.data[3].id}"> <li class="cancion">${datos.tracks.data[3].title}</li> </a>
+        <a href="detail-track.html?idCancion=${datos.tracks.data[4].id}"> <li class="cancion">${datos.tracks.data[4].title}</li> </a>
         `;
         
         let boton = document.querySelector(".vermas");
@@ -38,10 +38,24 @@ window.addEventListener("load", function(){
             if (primeraVez === true){
                 for (let i = 5; i<datos.tracks.data.length; i+=1){
                     document.querySelector(".albumTracks").innerHTML += `
-                    <a href="detail-track.html?idCancion=${datos.tracks.data[i].id}"> <li class="tracksAdicionales">${datos.tracks.data[i].title}</li> </a>
+                    <a href="detail-track.html?idCancion=${datos.tracks.data[i].id}"> <li class="cancion tracksAdicionales">${datos.tracks.data[i].title}</li> </a>
                     `;
                 }
                 primeraVez = false;
+
+                // ---- Selecciono todos mis elementos "li" cuando presiono el boton "learn more" ---- //
+                let canciones = document.querySelectorAll(".cancion")
+                for(let x = 0; x<canciones.length; x+=1){
+                    console.log(canciones[x])
+                    canciones[x].addEventListener("mouseover",function(){
+                        canciones[x].classList.add("cambiarColor")
+                        canciones[x].classList.remove("cancion")
+                    })
+                    canciones[x].addEventListener("mouseout",function(){
+                        canciones[x].classList.remove("cambiarColor")
+                        canciones[x].classList.add("cancion")
+                    })
+                }
 
             } else if (primeraVez === false){
                 let esconder = document.querySelectorAll(".tracksAdicionales");
@@ -50,13 +64,30 @@ window.addEventListener("load", function(){
                 }
                 primeraVez = true
             }
-        })
+        })    
+
+        // ---- Debo copiar esta estructura obligatoriamente para poder aplicar los efectos a las primeras 5 canciones que muestro por defecto ---- // 
+        let canciones = document.querySelectorAll(".cancion")
+        for(let x = 0; x<canciones.length; x+=1){
+            console.log(canciones[x])
+            canciones[x].addEventListener("mouseover",function(){
+                canciones[x].classList.add("cambiarColor")
+                canciones[x].classList.remove("cancion")
+            })
+            canciones[x].addEventListener("mouseout",function(){
+                canciones[x].classList.remove("cambiarColor")
+                canciones[x].classList.add("cancion")
+            })
+        }
     })
     
     .catch(function(error){
         console.log("El error es: " + error)
     })
 
-    //Estaria bueno poder agregar diseños a las canciones cuando les pasas el mouse por encima
-
+    
+    // let lista = document.querySelector(".albumTracks")
+    // lista.addEventListener("mouseover",function(){
+    //     lista.classList.add("cambiarColor")
+    // })
 })

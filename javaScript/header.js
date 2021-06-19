@@ -38,6 +38,7 @@ window.addEventListener("load", function(){                 //Permite que cargue
 
         // ---- JavaScript para el formulario ---- //
         const myform = document.querySelector("#myform");
+        console.log(myform)
         const inputbuscador = document.querySelector(".CuadrodeBusqueda");
         const msgerror = document.querySelector(".msgerror");
 

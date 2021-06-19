@@ -286,7 +286,7 @@ p {
     color: white;
 }
 
-.albumTracks li{
+.cancion{
     background-color:  rgb(0, 0, 77);
     color: rgb(239, 76, 39);
     margin-top: 3px;
@@ -296,9 +296,14 @@ p {
     border-radius: 10px;
 }
 
-.albumTracks .cambiarColor{
+.cambiarColor{
     background-color: rgb(239, 76, 39);
     color: rgb(0, 0, 77);
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .esconderCanciones {
@@ -521,6 +526,7 @@ li a{
 
 #icono, .miMusica a{
     color: #c302d5;
+    cursor: pointer;
 }
 
 .reproductor{
@@ -560,11 +566,32 @@ li a{
     border-radius: 15px;
 }
 
+.sectionPlaylist{
+    display: flex;
+    flex-direction: column;
+}
+
+.renglonPL{
+    display: flex;
+    flex-direction: row;
+    border-top: dashed 1px rgba(100, 100, 100);
+}
+
 .elemento1PL{
     display: flex;
+    justify-content: space-around;
     align-items: center;
+    width: 90%;
     padding: 3px;
     height: 75px;
+    cursor: pointer;
+}
+
+.iconos{
+    display: flex;
+    align-items: center;
+    width: 10%;
+    cursor: pointer;
 }
 
 .elemento1PL p{
@@ -584,12 +611,16 @@ li a{
     padding: 10px;
 }
 
-.eliminar {
+#eliminar {
     color: white;
 }
 
 .adicionalPL{
     display: none;   /*Cuando estamos en "mobile" no mostramos esto!*/
+}
+
+.ocultar{
+    display: none;
 }
 
 /* Diseño de Genero */
@@ -610,6 +641,11 @@ li a{
     width: 100%;
     color: white;
     font-size: 30px;
+}
+
+.seleccionado{
+    background-color: rgba(239, 76, 39, 0.1);
+    border-radius: 20px;
 }
 
 .genAd{
@@ -970,10 +1006,9 @@ footer{
     .elemento1PL {
         display: flex;
         flex-direction: row;
-        width: auto;
+        /* width: auto; */
         height: 90px;
         margin: 0px 10px 0px 10px;
-        border-top: dashed 1px rgba(100, 100, 100);
     }
 
     .elemento1PL p{

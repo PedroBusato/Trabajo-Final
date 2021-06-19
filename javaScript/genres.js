@@ -42,6 +42,16 @@ window.addEventListener("load", function(){
             <h2>${datos.data[x].name}</h2>
             `;
         }
+        console.log(recientes)
+        for (let i = 0; i<recientes.length; i+=1){
+            recientes[i].addEventListener("mouseover",function(){
+                recientes[i].classList.add("seleccionado")
+            })
+            recientes[i].addEventListener("mouseout",function(){
+                recientes[i].classList.remove("seleccionado")
+            })
+            
+        }
     })
 
     .catch(function(e){
