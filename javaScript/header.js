@@ -1,56 +1,42 @@
 window.addEventListener("load", function(){                 //Permite que cargue primero el HTML y luego el javaScript --> Permite evitar errores!
-    // const proxy = `https://cors-anywhere.herokuapp.com/`;
-    // const api = `${proxy}https://api.deezer.com/genre`;
-
-    // fetch(api)                                                              //Con fetch tomamos la informacion de la API
-    //     .then (function(response){
-    //         return (response.json());
-    //     })
-
-    //     .then (function(datos){
-    //         console.log(datos)
-    //         let queryString = (location.search);
-    //         let queryStringObj = new URLSearchParams (queryString);
-    //         let resultadoBusqueda = queryStringObj.get("busquedademusica");     //Buscamos el elemento dentro del queryString
-            
-    //         if(resultadoBusqueda.length == 0){ //Preguntar como hacer para que no me redireccione !!]
-    //             alert("La busqueda esta vacia! Intente nuevamente!")
-
-    //         } else if(resultadoBusqueda.length < 3){
-    //             alert("La busqueda debe contener al menos 3 caracteres! Intente nuevamente!")
-            
-    //         } else{                                                             //Si la busqueda tiene mas de tres caracteres de longitud, se ejecuta todo el codigo
-    //             for (let i = 0; i<(datos.data).length; i+=1){
-    //                 let genero = datos.data[i].name;
-    //                 let imgGenero = datos.data[i].picture_medium;
-    //                 if (genero.toUpperCase() == resultadoBusqueda.toUpperCase()){
-    //                     document.querySelector(".TitMusic").innerText = `${genero}`;
-    //                     document.querySelector(".ImgBusqueda").innerHTML = `<img src="${imgGenero}">`;
-    //                 }
-    //             }
-    //         }           
-    //     })
-
-    //     .catch (function(error){
-    //         return ("El error es: " + error)
-    //     })
-
+    const proxy = `https://cors-anywhere.herokuapp.com/`;
 
         // ---- JavaScript para el formulario ---- //
-        const myform = document.querySelector("#myform");
-        console.log(myform)
-        const inputbuscador = document.querySelector(".CuadrodeBusqueda");
-        const msgerror = document.querySelector(".msgerror");
+    const myform = document.querySelector("#myform");
+    const inputbuscador = document.querySelector(".CuadrodeBusqueda");
+    const msgerror = document.querySelector(".msgerror");
 
-        myform.addEventListener("submit", OnSubmit);
+    myform.addEventListener("submit", OnSubmit);
 
-        function OnSubmit (e) {
-            e.preventDefault();
+    function OnSubmit (e) {
+        e.preventDefault();
             
-            if(inputbuscador.value === "" || inputbuscador.value.length <= 2) {
-                msgerror.innerHTML = "Por favor, introduzca texto";
-            } else {
-                window.location.href = `search-results.html?info=${inputbuscador.value}`
-            }
-        }  
+        if(inputbuscador.value === "" || inputbuscador.value.length <= 2) {
+            msgerror.innerHTML = "Por favor, introduzca texto";
+        } else {
+            fetch(`${proxy}https://api.deezer.com/genre`)
+            .then(function(response){
+                return response.json();
+            })
+
+            .then(function(datos){
+            console.log(datos);
+                for (let i = 1; i<(datos.data).length; i+=1){     // Arrancamos el for desde 1 para no agarrar el genero de todos que no tiene imagen
+                    if((datos.data[i].name).toUpperCase()  ===  (inputbuscador.value).toUpperCase()) {
+                        console.log("asd")
+                        window.location.href = `search-results.html?idGenero=${datos.data[i].id}`
+                    }                   
+                }
+            })
+            
+            .catch(function(error){
+            console.log("el error fue: "+ error)
+            })
+        }
+    }
+          
+    
+       
+    
+    
 });

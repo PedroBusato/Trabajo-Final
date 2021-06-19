@@ -782,6 +782,19 @@ li a{
     color: white;
 }
 
+.cadaArtista {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+}
+
+.artistResult {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
 
 /* Footer */
 footer{

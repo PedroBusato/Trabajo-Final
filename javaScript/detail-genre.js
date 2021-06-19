@@ -3,7 +3,7 @@ window.addEventListener("load", function(){
   
     let queryString = location.search;
     let queryStringObj = new URLSearchParams(queryString);
-    let idGenero = queryStringObj.get("idGenero");
+    let idGenero = queryStringObj.get("idGenero");  //Aca estamos conectando con el queryString de Generos
   
     fetch (`${proxy}https://api.deezer.com/genre/${idGenero}`)                                            //El primer fetch permite tomar unicamente el nombre e imagen del genero
       .then(function(response){
@@ -18,8 +18,8 @@ window.addEventListener("load", function(){
         let infoGenero = document.querySelector(".artdetailgen");
         infoGenero.innerHTML +=`
         <img class="imgdetailgenre" src="${datos.picture_big}">
-        <p class="datosdetgen">Listen now to the most iconic Artists of this genre🔥🔥🔥!</p>
-        `;
+        <p class="datosdetgen">Listen now to the most iconic Artists of this genre🔥🔥🔥!</p> 
+        `; //Este es un texto decorativo similar a los de las Playlist de Spotify que aparecera en todos los generos, cualquiera que se seleccione
 
       })
       .catch(function(error){
