@@ -469,6 +469,14 @@ li a{
     color: white;
 }
 
+.albumesGenero {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+}
+
 /* Diseño Detalles de Cancion */
 .tit2{
     color: white;
@@ -644,7 +652,7 @@ li a{
 }
 
 .seleccionado{
-    background-color: rgba(239, 76, 39, 0.1);
+    background-color: rgba(239, 76, 39, 0.7);
     border-radius: 20px;
 }
 
@@ -787,6 +795,11 @@ li a{
     flex-direction: column;
     width: 30%;
     text-align: center;
+    color: white;
+}
+
+.cadaArtista img{
+    width: 100%;
 }
 
 .artistResult {

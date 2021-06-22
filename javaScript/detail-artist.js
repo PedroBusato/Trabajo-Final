@@ -4,7 +4,9 @@ window.addEventListener("load", function(){
     let idArtista = location.search;
     let idArtistaObj = new  URLSearchParams(idArtista);
     let idParaFetch = idArtistaObj.get("idArtista");
-    fetch(`${proxy}https://api.deezer.com/artist/${idParaFetch}`)                                       //No podemos hacer directamente "artist/${idParaFetch}/top" ya que esta segunda API no nos otorga la foto del artista
+
+    // ---- Hacemos un primer fetch para poder buscar la informacion del artista a traves de su ID ---- //
+    fetch(`${proxy}https://api.deezer.com/artist/${idParaFetch}`)                                       //No podemos hacer directamente "artist/${idParaFetch}/top" ya que esta segunda direccion no nos otorga la foto del artista!
 
     .then(function(response){
         return response.json()
@@ -31,7 +33,8 @@ window.addEventListener("load", function(){
         console.log("El error fue: " + error)
     })
 
-    fetch (`${proxy}https://api.deezer.com/artist/${idParaFetch}/top`)                                  //Con este fetch encontramos los 5 top canciones del artista
+    // ---- Hacemos un segundo fetch para poder hallar las top 5 canciones del artista ---- //
+    fetch (`${proxy}https://api.deezer.com/artist/${idParaFetch}/top`)                                  
 
         .then(function(response2){
             return response2.json()
@@ -48,15 +51,15 @@ window.addEventListener("load", function(){
         .catch(function(error){
             console.log("El error es: " + error)
         })
-
-    fetch(`${proxy}https://api.deezer.com/artist/${idParaFetch}/albums`)                            //No podemos hacer directamente "artist/${idParaFetch}/top" ya que esta segunda API no nos otorga la foto del artista
+    // ---- Hacemos un tercer y ultimo fetch para buscar los albumes del artista, y asi mostrar tres de ellos
+    fetch(`${proxy}https://api.deezer.com/artist/${idParaFetch}/albums`)                          
 
     .then(function(response3){
         return response3.json()
     })
 
     .then(function(datos3){    
-        console.log("Albumes del artista")                                                                     //Hacemos un tercer fetch para encontrar los Top 3 albumes de nuestro artista
+        console.log("Albumes del artista")                             
         console.log(datos3)    
 
         let primeraVez = true;

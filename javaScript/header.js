@@ -28,15 +28,10 @@ window.addEventListener("load", function(){                 //Permite que cargue
                     }                   
                 }
             })
-            
+
             .catch(function(error){
             console.log("el error fue: "+ error)
             })
         }
     }
-          
-    
-       
-    
-    
 });

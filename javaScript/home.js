@@ -1,8 +1,8 @@
 window.addEventListener("load", function(){               
     const proxy = `https://cors-anywhere.herokuapp.com/`;
-    const apiREG = `${proxy}https://api.deezer.com/genre/122/artists`;             //API para artistas de reggaeton!
 
     // ---- Fetch para encontrar top reggaetoneros ---- //
+    const apiREG = `${proxy}https://api.deezer.com/genre/122/artists`;            
     fetch(apiREG)                                                                  
         .then (function(response){
             return (response.json());
@@ -10,7 +10,7 @@ window.addEventListener("load", function(){
 
         .then (function(datos){
             console.log(datos)
-            let imagenesLatin = document.querySelectorAll(".latinImg");                                 //Selecciono todos los elementos con dicha clase --> me devuelve un array
+            let imagenesLatin = document.querySelectorAll(".latinImg");                                 //Selecciono todos los elementos con dicha clase --> me devuelve un array de 6 elementos ya que tengo 6 artistas en la lista.
             let infoLatin = document.querySelectorAll(".latinInfo");                                    //El scope de estas variables es unicamente dentro del .then donde se encuentran
 
             for (let x = 0; x<imagenesLatin.length; x+=1){
@@ -26,15 +26,13 @@ window.addEventListener("load", function(){
                 `;                                                                                      //Al trabajar con "datos.data[y].id" en lugar de "datos.data[y].name" nos ahorramos el problema que puede surgir de trabajar con artistas que tengan mas de una palabra en su nombre --> ejemplo: Bad Bunny                                        //Hasta el momento encontramos la foto del artista y su nombre. Necesitamos el album y la duracion de la cancion!!!
             }
 
-            // console.log(idArtista);
-
             for(let p = 0; p<idArtista.length; p+=1){          
-                fetch(`${proxy}https://api.deezer.com/artist/${idArtista[p]}/top`)                      //El ciclo "for" permite hacer un fetch para cada artista, a partir de su ID
+                fetch(`${proxy}https://api.deezer.com/artist/${idArtista[p]}/top`)                      //Hacemos un fetch para cada artista a partir de su ID. Necesitamos dicho fetch para conseguir la informacion de las canciones del artista.
                     .then(function(response2){
                         return response2.json();
                     })
                             
-                    .then(function(datos2){                                                      //datos2 es un objeto con un array dentro con las top 5 canciones del artista
+                    .then(function(datos2){                                                      
                         infoLatin[p].innerHTML += `
                         <a href="detail-track.html?idCancion=${datos2.data[0].id}"> <h3>Song: ${datos2.data[0].title}</h3> </a> 
                         <a href="detail-album.html?idAlbum=${datos2.data[0].album.id}"> <p>Album: ${datos2.data[0].album.title}</p> </a>
@@ -60,7 +58,7 @@ window.addEventListener("load", function(){
             })
     
             .then (function(datos){
-                let sectionsDj = document.querySelectorAll(".sectiondj");
+                let sectionsDj = document.querySelectorAll(".sectiondj");                               //Devuelve un array de 6 elementos ya que nuevamente la lista de DJs en el HTML tiene 6 artistas
                 for (let j = 0; j<sectionsDj.length; j+=1){
                     sectionsDj[j].innerHTML += `
                     <a href="detail-artist.html?idArtista=${datos.data[j].id}"> <img src="${datos.data[j].picture_medium}"> </a> 
@@ -84,26 +82,23 @@ window.addEventListener("load", function(){
         .then(function(datos){
             let seccionAlbum = document.querySelectorAll(".albumborder");
 
-            let idArtista =[]
+            let idArtista =[]                                                                           //Guardamos los IDs de los top 6 artistas para luego buscar sus albumes mas escuchados
             
             for(let i = 0; i<seccionAlbum.length; i+=1){
                 idArtista.push(datos.data[i].id)
             }
             
             for(let x = 0; x<idArtista.length; x+=1){ 
-                fetch(`${proxy}https://api.deezer.com/artist/${idArtista[x]}/albums`)
+                fetch(`${proxy}https://api.deezer.com/artist/${idArtista[x]}/albums`)                   //Hacemos un fetch para cada artista a partir de su ID para poder acceder a la informacion de sus albumes
                     .then (function(response2){
                         return response2.json()
                     })
 
                     .then (function(datos2){
-                        // console.log("Los albumes de los artistas son:")
-                        // console.log(datos2)
-
                         seccionAlbum[x].innerHTML +=`
                         <a href="detail-album.html?idAlbum=${datos2.data[0].id}"> <img src="${datos2.data[0].cover_medium}"> </a>
                         <h2 class="albumtext">${datos2.data[0].title} </h2>
-                        `;                                                                              //Usamos siempre data[0] para agarrar la informacion del album top!
+                        `;                                                                              //Usamos siempre data[0] para agarrar la informacion del album top, es decir, el mas escuchado!
                     })
 
                     .catch(function(error){

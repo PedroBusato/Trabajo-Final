@@ -25,7 +25,7 @@ window.addEventListener("load", function(){
       console.log("el error fue: "+ error)
     })
 
-    //Este fetch para top 3 artistas del genero
+  // ---- Segundo fetch para top 3 artistas del genero ---- //
   fetch (`${proxy}https://api.deezer.com/genre/${idBusqueda}/artists`)                                            //El primer fetch permite tomar unicamente el nombre e imagen del genero
     .then(function(response){
         return response.json();
@@ -37,8 +37,8 @@ window.addEventListener("load", function(){
         let section = document.querySelector(".artistResult")
         section.innerHTML+=`
         <div class="cadaArtista">
-          <Img class="albumesAdicionales" src="${datos.data[k].picture_medium}" alt="">
-          <h2 class="albumName">${datos.data[k].name}<h2>
+          <a href="detail-artist.html?idArtista=${datos.data[k].id}"> <img src="${datos.data[k].picture_medium}" alt=""> </a>
+          <h2>${datos.data[k].name}<h2>
         </div>
         `;
       }

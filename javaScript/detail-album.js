@@ -4,7 +4,6 @@ window.addEventListener("load", function(){
     let idAlbum = location.search;
     let idAlbumObj = new URLSearchParams(idAlbum);
     let idParaFetch = idAlbumObj.get("idAlbum");
-    // console.log(idParaFetch)
 
     fetch(`${proxy}https://api.deezer.com/album/${idParaFetch}`)
 
@@ -13,7 +12,7 @@ window.addEventListener("load", function(){
     })
 
     .then(function(datos){
-        console.log(datos)
+        // ---- Agregamos la informacion del disco. Aun no agregamos sus canciones ---- //
         document.querySelector(".artdiscos1").innerHTML += `
         <img class="imgalbums" src="${datos.cover_medium}">
         <div class="infodisco">
@@ -24,6 +23,7 @@ window.addEventListener("load", function(){
         </div>
         `;
 
+        // ---- Por defecto mostramos las primeras 5 canciones del album ---- //
         document.querySelector(".albumTracks").innerHTML += `
         <a href="detail-track.html?idCancion=${datos.tracks.data[0].id}"> <li class="cancion">${datos.tracks.data[0].title}</li> </a>
         <a href="detail-track.html?idCancion=${datos.tracks.data[1].id}"> <li class="cancion">${datos.tracks.data[1].title}</li> </a>
@@ -32,8 +32,10 @@ window.addEventListener("load", function(){
         <a href="detail-track.html?idCancion=${datos.tracks.data[4].id}"> <li class="cancion">${datos.tracks.data[4].title}</li> </a>
         `;
         
+        // ---- Le permitimos al usuario poder ver el resto de canciones del album ---- //
         let boton = document.querySelector(".vermas");
         let primeraVez = true;
+
         boton.addEventListener("click",function(){
             if (primeraVez === true){
                 for (let i = 5; i<datos.tracks.data.length; i+=1){
@@ -43,10 +45,9 @@ window.addEventListener("load", function(){
                 }
                 primeraVez = false;
 
-                // ---- Selecciono todos mis elementos "li" cuando presiono el boton "learn more" ---- //
+                // ---- Detalles esteticos a las canciones. Selecciono TODAS las canciones del album (No las primeras cinco)---- //
                 let canciones = document.querySelectorAll(".cancion")
                 for(let x = 0; x<canciones.length; x+=1){
-                    console.log(canciones[x])
                     canciones[x].addEventListener("mouseover",function(){
                         canciones[x].classList.add("cambiarColor")
                         canciones[x].classList.remove("cancion")
@@ -69,7 +70,6 @@ window.addEventListener("load", function(){
         // ---- Debo copiar esta estructura obligatoriamente para poder aplicar los efectos a las primeras 5 canciones que muestro por defecto ---- // 
         let canciones = document.querySelectorAll(".cancion")
         for(let x = 0; x<canciones.length; x+=1){
-            console.log(canciones[x])
             canciones[x].addEventListener("mouseover",function(){
                 canciones[x].classList.add("cambiarColor")
                 canciones[x].classList.remove("cancion")
@@ -84,10 +84,4 @@ window.addEventListener("load", function(){
     .catch(function(error){
         console.log("El error es: " + error)
     })
-
-    
-    // let lista = document.querySelector(".albumTracks")
-    // lista.addEventListener("mouseover",function(){
-    //     lista.classList.add("cambiarColor")
-    // })
 })
