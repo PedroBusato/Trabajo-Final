@@ -20,12 +20,14 @@ window.addEventListener("load", function(){                 //Permite que cargue
             })
 
             .then(function(datos){
-            console.log(datos);
+            // console.log(datos);
                 for (let i = 1; i<(datos.data).length; i+=1){     // Arrancamos el for desde 1 para no agarrar el genero de todos que no tiene imagen
                     if((datos.data[i].name).toUpperCase()  ===  (inputbuscador.value).toUpperCase()) {
                         console.log("asd")
                         window.location.href = `search-results.html?idGenero=${datos.data[i].id}`
-                    }                   
+                    } else {
+                        alert("No hay resultados para la busqueda de: " + inputbuscador.value )
+                    }                  
                 }
             })
 

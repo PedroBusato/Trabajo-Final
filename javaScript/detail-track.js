@@ -31,7 +31,7 @@ window.addEventListener("load", function(){
                                                                    
         // let cancionesParaPlaylist = [];
         // localStorage.setItem("cancionesAgregar",JSON.stringify(cancionesParaPlaylist));              //Tenemos agregado un array al localStorage, el cual permanecera alli ya que almacena informacion sin tiempo de expiracion 
-        // localStorage.clear()
+        // // localStorage.clear()
 
         let iconoPlayList = document.querySelector("#icono");
         iconoPlayList.addEventListener("click",function(){

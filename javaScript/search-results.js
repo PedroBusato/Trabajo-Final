@@ -23,6 +23,7 @@ window.addEventListener("load", function(){
     })
     .catch(function(error){
       console.log("el error fue: "+ error)
+      alert("No hay resultados de Busqueda")
     })
 
   // ---- Segundo fetch para top 3 artistas del genero ---- //
