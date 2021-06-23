@@ -27,6 +27,7 @@ window.addEventListener("load", function(){                 //Permite que cargue
                         window.location.href = `search-results.html?idGenero=${datos.data[i].id}`
                     } else {
                         alert("No hay resultados para la busqueda de: " + inputbuscador.value )
+                        inputbuscador.value.clear()
                     }                  
                 }
             })
