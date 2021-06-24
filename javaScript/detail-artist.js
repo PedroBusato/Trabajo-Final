@@ -1,8 +1,9 @@
 window.addEventListener("load", function(){               
     const proxy = `https://cors-anywhere.herokuapp.com/`;
 
-    let idArtista = location.search;
-    let idArtistaObj = new  URLSearchParams(idArtista);
+    let idArtista = location.search;                                                                    //Tomamos el queryString --> viene en forma STRING!
+    let idArtistaObj = new URLSearchParams(idArtista);
+    console.log(idArtistaObj)
     let idParaFetch = idArtistaObj.get("idArtista");
 
     // ---- Hacemos un primer fetch para poder buscar la informacion del artista a traves de su ID ---- //
