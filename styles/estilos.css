@@ -459,6 +459,10 @@ li a{
     width: 100%;
 }
 
+.juan{
+    color: wheat;
+}
+
 .vermas {
     cursor: pointer;
     display: none;
@@ -714,6 +718,10 @@ li a{
     width: 100%;
 }
 
+.ImgBusqueda h2{
+    color: white;
+}
+
 .TitMusic {
     width: 100%;
     color:black;
@@ -793,20 +801,33 @@ li a{
 .cadaArtista {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 100%;
     text-align: center;
     color: white;
+    margin-top: 10px;
 }
 
 .cadaArtista img{
-    width: 100%;
+    width: 90%;
 }
 
 .artistResult {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     justify-content: space-between;
+}
+
+.gifError{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.gifError h2, .gifError a{
+    color: white;
+    text-decoration: none;
 }
 
 /* Footer */
@@ -877,7 +898,6 @@ footer{
     margin: 0%;
     background-color: black;
 }
-
 
 /* Comenzamos con los media Querie */
 @media (min-width:1024px){
@@ -1150,22 +1170,29 @@ footer{
         margin: 10px;
     }
     
-    .busquedademusica{
+    /* .busquedademusica{
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
         padding: 0px;
         margin-bottom: 30px;
-    }
+    } */
 
     .ImgBusqueda{
         width: 30%;
-        height: 350px;
+        /* height: 350px; */
     }
 
     .pBusqueda p{
         font-size: 25px;
     }
+    
+    .artistResult{
+        flex-direction: row;
+    }
 
+    .cadaArtista{
+        width: 100%;
+    }
     
 }

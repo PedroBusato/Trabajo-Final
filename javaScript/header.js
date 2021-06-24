@@ -5,6 +5,7 @@ window.addEventListener("load", function(){                 //Permite que cargue
     const myform = document.querySelector("#myform");
     const inputbuscador = document.querySelector(".CuadrodeBusqueda");
     const msgerror = document.querySelector(".msgerror");
+    let encontroGenero = false;                                                  
 
     myform.addEventListener("submit", OnSubmit);
 
@@ -12,7 +13,7 @@ window.addEventListener("load", function(){                 //Permite que cargue
         e.preventDefault();
             
         if(inputbuscador.value === "" || inputbuscador.value.length <= 2) {
-            msgerror.innerHTML = "Por favor, introduzca texto";
+            msgerror.innerText = "Por favor, introduzca texto";                                         //Habiamos puesto innerHTML pero creo que deberia ser innerText
         } else {
             fetch(`${proxy}https://api.deezer.com/genre`)
             .then(function(response){
@@ -20,15 +21,17 @@ window.addEventListener("load", function(){                 //Permite que cargue
             })
 
             .then(function(datos){
-            // console.log(datos);
-                for (let i = 1; i<(datos.data).length; i+=1){     // Arrancamos el for desde 1 para no agarrar el genero de todos que no tiene imagen
+            console.log(datos);
+                for (let i = 1; i<(datos.data).length; i+=1){     // Arrancamos el for desde 1 para no agarrar el genero "all" que no tiene imagen en la API
                     if((datos.data[i].name).toUpperCase()  ===  (inputbuscador.value).toUpperCase()) {
                         console.log("asd")
                         window.location.href = `search-results.html?idGenero=${datos.data[i].id}`
-                    } else {
-                        alert("No hay resultados para la busqueda de: " + inputbuscador.value )
-                        inputbuscador.value.clear()
-                    }                  
+                        encontroGenero = true;
+                    }                
+                }
+                
+                if(encontroGenero == false){
+                    window.location.href = `search-results.html?idGenero=errorId`
                 }
             })
 
