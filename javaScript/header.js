@@ -13,7 +13,7 @@ window.addEventListener("load", function(){                 //Permite que cargue
         e.preventDefault();
             
         if(inputbuscador.value === "" || inputbuscador.value.length <= 2) {
-            msgerror.innerText = "Por favor, introduzca texto";                                         //Habiamos puesto innerHTML pero creo que deberia ser innerText
+            msgerror.innerText = "Por favor, introduzca más de 2 caracteres";                                         //Habiamos puesto innerHTML pero creo que deberia ser innerText
         } else {
             fetch(`${proxy}https://api.deezer.com/genre`)
             .then(function(response){
