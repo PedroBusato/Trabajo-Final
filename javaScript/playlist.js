@@ -6,24 +6,6 @@ window.addEventListener("load",function(){
     let playlist = document.querySelector(".sectionPlaylist");
     console.log(obtengoArrayParse);
 
-    // ---- Intentamos incluso con forEach pero fue imposible---- //
-    // misIds.forEach(function(cadaUno){
-    //     console.log(cadaUno)
-    //     fetch(`${proxy}https://api.deezer.com/track/${cadaUno}`)
-    //         .then(function(response){
-    //             return response.json()
-    //         })
-            
-    //         .then(function(datos){
-    //             console.log(cadaUno)           //Esta linea nos mostro que cada vez que entra al fetch, se desacomoda todo
-    //             console.log(datos)
-    //         })
-
-    //         .catch(function(error){
-    //             console.log("El error fue:" + error)
-    //         })
-    // });
-
     for (let y = 0; y<obtengoArrayParse.length; y+=1){
         playlist.innerHTML+=`
         <div class="renglonPL">

@@ -24,7 +24,6 @@ window.addEventListener("load", function(){                 //Permite que cargue
             console.log(datos);
                 for (let i = 1; i<(datos.data).length; i+=1){     // Arrancamos el for desde 1 para no agarrar el genero "all" que no tiene imagen en la API
                     if((datos.data[i].name).toUpperCase()  ===  (inputbuscador.value).toUpperCase()) {
-                        console.log("asd")
                         window.location.href = `search-results.html?idGenero=${datos.data[i].id}`
                         encontroGenero = true;
                     }                
