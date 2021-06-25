@@ -7,7 +7,7 @@ window.addEventListener("load", function(){                 //Permite que cargue
     const msgerror = document.querySelector(".msgerror");
     let encontroGenero = false;                                                  
 
-    myform.addEventListener("submit", OnSubmit);
+    myform.addEventListener("submit", OnSubmit); 
 
     function OnSubmit (e) {
         e.preventDefault();

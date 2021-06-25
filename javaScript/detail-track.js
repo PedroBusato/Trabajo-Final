@@ -1,7 +1,7 @@
 window.addEventListener("load", function(){               
-    let queyString = location.search;
-    let queryStringObj = new URLSearchParams(queyString);
-    let idCancion = queryStringObj.get("idCancion");
+    let queyString = location.search; // te devuelve todo el string desde el "?" 
+    let queryStringObj = new URLSearchParams(queyString); // lo convertimos a objeto 
+    let idCancion = queryStringObj.get("idCancion"); // extraemos el valor almacenado en el query desp del "="
     
     const proxy = `https://cors-anywhere.herokuapp.com/`;
 
